@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CA8DC13-34EF-4949-98BE-E89FC03486D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TVKing2</RootNamespace>
+    <AssemblyName>TVKing2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CF41A7FBA3BEB4E64F783BEAF1FD2DAB80B50287</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TVKing2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_tvking_clean.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\DXperience 12.1\Bin\Framework\DevExpress.Data.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\DXperience 12.1\Bin\Framework\DevExpress.Printing.v12.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\DXperience 12.1\Bin\Framework\DevExpress.Utils.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\DXperience 12.1\Bin\Framework\DevExpress.XtraBars.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\DXperience 12.1\Bin\Framework\DevExpress.XtraEditors.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TVKingSkin">
+      <HintPath>..\TVKingSkin\TVKingSkin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="class\AppConst.cs" />
+    <Compile Include="class\Channel.cs" />
+    <Compile Include="class\ChannelFavorites.cs" />
+    <Compile Include="class\RegisterCheck.cs" />
+    <Compile Include="class\RequestTVKServer.cs" />
+    <Compile Include="class\SystemUserCheck.cs" />
+    <Compile Include="class\YoutubeObject.cs" />
+    <Compile Include="class\YoutubeSearch.cs" />
+    <Compile Include="control\ctlAdvertisement2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ctlAdvertisement2.Designer.cs">
+      <DependentUpon>ctlAdvertisement2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\ctlAdvertisement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ctlAdvertisement.Designer.cs">
+      <DependentUpon>ctlAdvertisement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\YoutubeVideoList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\YoutubeVideoList.Designer.cs">
+      <DependentUpon>YoutubeVideoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\FlashPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FlashPopup.Designer.cs">
+      <DependentUpon>FlashPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\fmAdvertisement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fmAdvertisement.Designer.cs">
+      <DependentUpon>fmAdvertisement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\fmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fmRegister.Designer.cs">
+      <DependentUpon>fmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\fmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fmSetting.Designer.cs">
+      <DependentUpon>fmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\fmTellFriends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fmTellFriends.Designer.cs">
+      <DependentUpon>fmTellFriends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\fmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fmUpdate.Designer.cs">
+      <DependentUpon>fmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\FormAskEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FormAskEmail.Designer.cs">
+      <DependentUpon>FormAskEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\FormInstallCodec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FormInstallCodec.Designer.cs">
+      <DependentUpon>FormInstallCodec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\FormSubmitUrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FormSubmitUrl.Designer.cs">
+      <DependentUpon>FormSubmitUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\FormYoutube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FormYoutube.Designer.cs">
+      <DependentUpon>FormYoutube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\MainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MainApp.Designer.cs">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\RatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\RatingForm.Designer.cs">
+      <DependentUpon>RatingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ViolateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ViolateReport.Designer.cs">
+      <DependentUpon>ViolateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interface\IFormYoutube.cs" />
+    <Compile Include="interface\IRegisterCheck.cs" />
+    <Compile Include="interface\IYoutubeSearch.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="control\ctlAdvertisement2.resx">
+      <DependentUpon>ctlAdvertisement2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\ctlAdvertisement.resx">
+      <DependentUpon>ctlAdvertisement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\YoutubeVideoList.resx">
+      <DependentUpon>YoutubeVideoList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\FlashPopup.resx">
+      <DependentUpon>FlashPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fmAdvertisement.resx">
+      <DependentUpon>fmAdvertisement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fmRegister.resx">
+      <DependentUpon>fmRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fmSetting.resx">
+      <DependentUpon>fmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fmTellFriends.resx">
+      <DependentUpon>fmTellFriends.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fmUpdate.resx">
+      <DependentUpon>fmUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\FormAskEmail.resx">
+      <DependentUpon>FormAskEmail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\FormInstallCodec.resx">
+      <DependentUpon>FormInstallCodec.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\FormSubmitUrl.resx">
+      <DependentUpon>FormSubmitUrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\FormYoutube.resx">
+      <DependentUpon>FormYoutube.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MainApp.resx">
+      <DependentUpon>MainApp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\RatingForm.resx">
+      <DependentUpon>RatingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ViolateReport.resx">
+      <DependentUpon>ViolateReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\loadingicon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\message_screen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\300x250_eye.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\stop_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\button_small_mode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\add_to_fav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\remove_fav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\logo_small_software.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\psd_03a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\psd_05a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\psd_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\scroll_bg.jpg" />
+    <None Include="bin\Debug\images\scroll_down.jpg" />
+    <None Include="bin\Debug\images\scroll_indicator.jpg" />
+    <None Include="bin\Debug\images\scroll_up.jpg" />
+    <None Include="bin\Debug\images\scroll_indicator_bottom.jpg" />
+    <None Include="bin\Debug\images\scroll_indicator_top.jpg" />
+    <None Include="bin\Debug\images\background.jpg" />
+    <None Include="bin\Debug\images\logo_text_tvking.png" />
+    <None Include="bin\Debug\images\psd_03.png" />
+    <None Include="bin\Debug\images\background.bmp" />
+    <None Include="bin\Debug\images\psd_05.png" />
+    <None Include="bin\Debug\images\control_bg.jpg" />
+    <None Include="bin\Debug\images\animation_loading.gif" />
+    <None Include="bin\Debug\images\form_top.png" />
+    <None Include="bin\Debug\images\form_top_left.png" />
+    <None Include="bin\Debug\images\form_top_right.png" />
+    <None Include="bin\Debug\images\icon_close.png" />
+    <None Include="bin\Debug\images\icon_close_n.png" />
+    <None Include="bin\Debug\images\icon_config.png" />
+    <None Include="bin\Debug\images\icon_key.png" />
+    <None Include="bin\Debug\images\icon_maximize.png" />
+    <None Include="bin\Debug\images\icon_maximize_n.png" />
+    <None Include="bin\Debug\images\icon_minimize.png" />
+    <None Include="bin\Debug\images\icon_minimize_n.png" />
+    <None Include="bin\Debug\images\bandwith1.jpg" />
+    <None Include="bin\Debug\images\bandwith2.jpg" />
+    <None Include="bin\Debug\images\bandwith3.jpg" />
+    <None Include="bin\Debug\images\bandwith4.jpg" />
+    <None Include="bin\Debug\images\bandwith5.jpg" />
+    <None Include="bin\Debug\images\divider.jpg" />
+    <None Include="bin\Debug\images\fav_icon.jpg" />
+    <None Include="bin\Debug\images\default.png" />
+    <None Include="bin\Debug\images\blackbg.png" />
+    <None Include="bin\Debug\images\free_100.jpg" />
+    <None Include="bin\Debug\images\logo_tvking.jpg" />
+    <None Include="bin\Debug\images\reg_now_button.jpg" />
+    <None Include="bin\Debug\images\reg_ver.jpg" />
+    <None Include="bin\Debug\images\using_button.jpg" />
+    <None Include="bin\Debug\images\separator_ads.jpg" />
+    <None Include="bin\Debug\images\loader.png" />
+    <None Include="bin\Debug\images\register_ad.jpg" />
+    <None Include="bin\Debug\images\unlock_button.jpg" />
+    <None Include="bin\Debug\images\refresh.png" />
+    <None Include="bin\Debug\images\broken_link.png" />
+    <None Include="bin\Debug\images\Copyright.png" />
+    <None Include="bin\Debug\images\tell_friend.png" />
+    <None Include="bin\Debug\images\youtube-icon.jpg" />
+    <None Include="bin\Debug\images\icon_youtube_on.png" />
+    <None Include="bin\Debug\images\icon_users.png" />
+    <None Include="bin\Debug\images\most_watched.gif" />
+    <None Include="bin\Debug\images\last_watched.png" />
+    <Content Include="icon_tvking_clean.ico" />
+    <None Include="Resources\control_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\crawlerlibnet\CrawlerLib.Net.csproj">
+      <Project>{8A905228-8168-4E6C-99F8-5A1C7E6684B5}</Project>
+      <Name>CrawlerLib.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TVKControls\TVKControls.csproj">
+      <Project>{658DF153-696F-423B-9384-865B87F0AE76}</Project>
+      <Name>TVKControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{658DF153-696F-423B-9384-865B87F0AE76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TVKing2</RootNamespace>
+    <AssemblyName>TVKControls</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingStars.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RatingStars.Designer.cs">
+      <DependentUpon>RatingStars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKAdsRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVKAdsRight.Designer.cs">
+      <DependentUpon>TVKAdsRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TVKComboBox.Designer.cs">
+      <DependentUpon>TVKComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKControlResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TVKControlResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TVKForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVKForm.Designer.cs">
+      <DependentUpon>TVKForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TVKInfo.Designer.cs">
+      <DependentUpon>TVKInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKingButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TVKingButton.Designer.cs">
+      <DependentUpon>TVKingButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKingScrollbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TVKingTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TVKingTextBox.Designer.cs">
+      <DependentUpon>TVKingTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TVKList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TVKList.Designer.cs">
+      <DependentUpon>TVKList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TVKTrialScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TVKTrialScreen.Designer.cs">
+      <DependentUpon>TVKTrialScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVKVolume.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TVKVolume.Designer.cs">
+      <DependentUpon>TVKVolume.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RatingStars.resx">
+      <DependentUpon>RatingStars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVKAdsRight.resx">
+      <DependentUpon>TVKAdsRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVKControlResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TVKControlResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVKForm.resx">
+      <DependentUpon>TVKForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVKInfo.resx">
+      <DependentUpon>TVKInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVKingTextBox.resx">
+      <DependentUpon>TVKingTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVKList.resx">
+      <DependentUpon>TVKList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVKTrialScreen.resx">
+      <DependentUpon>TVKTrialScreen.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll_down.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll_indicator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll_indicator_bottom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll_indicator_top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll_up.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_indicator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_left.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_right.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_trial_expired_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_register_of.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_register_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_top_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_top_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_close_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_maximize_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_minimize_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating_unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rate_button_click.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rate_button_hover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_chooser_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_chooser_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt_border_bottom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt_border_right.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_left.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_middle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_right.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_left_click.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_mid_click.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_right_click.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_left2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_right2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\crawlerlibnet\CrawlerLib.Net.csproj">
+      <Project>{8A905228-8168-4E6C-99F8-5A1C7E6684B5}</Project>
+      <Name>CrawlerLib.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

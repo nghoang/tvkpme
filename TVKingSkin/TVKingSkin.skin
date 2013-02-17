@@ -1,0 +1,6 @@
+﻿<SkinItems version="1.0" application="SkinEditor" assembly="TVKingSkin" class="" extranamespace="">
+  <Item>
+    <ItemName>TVKingSkin</ItemName>
+    <TemplateName>DevExpress Style</TemplateName>
+  </Item>
+</SkinItems>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="7.2.1" version="8.6" Modules="professional" RootPath="." Language="en" Id="{384FF73E-6D15-4312-823A-50CB55EA6A88}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPHELPLINK" Value="http://tvking.tv"/>
+    <ROW Property="ARPPRODUCTICON" Value="icon_tv_king.exe" Type="8"/>
+    <ROW Property="ARPURLINFOABOUT" Value="http://tvking.tv"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="http://tvking.tv"/>
+    <ROW Property="BannerBitmap" Value="banner" MultiBuildValue="DefaultBuild:installer_image_2.jpg" Type="1" MsiKey="BannerBitmap"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="DialogBitmap" Value="dialog" MultiBuildValue="DefaultBuild:install2.bmp" Type="1" MsiKey="DialogBitmap"/>
+    <ROW Property="Manufacturer" Value="KPMedia" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{7EA2EE15-A2B6-41FF-93FB-8B6FE891910D} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="TVKing" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.8.4"/>
+    <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{C9A54BCC-7082-4965-B1F7-588ADEB9CBAE}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="ProgramFilesFolder" Directory_Parent="TARGETDIR" DefaultDir="Progra~1|ProgramFilesFolder" IsPseudoRoot="1"/>
+    <ROW Directory="ProgramMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="Progra~2|ProgramMenuFolder" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="TVKing_DIR" Directory_Parent="ProgramMenuFolder" DefaultDir="TVKing"/>
+    <ROW Directory="flags_Dir" Directory_Parent="APPDIR" DefaultDir="flags"/>
+    <ROW Directory="images_Dir" Directory_Parent="APPDIR" DefaultDir="images"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AFGHANISTAN.bmp" ComponentId="{92EB3DC3-29A6-4061-9E8C-2DADC0CE95D2}" Directory_="flags_Dir" Attributes="0" KeyPath="AFGHANISTAN.bmp" Type="0"/>
+    <ROW Component="AI_ExePath" ComponentId="{5F55E802-4385-4225-B5B7-40CA3C69D742}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="AxInterop.ShockwaveFlashObjects.dll" ComponentId="{957E9CB1-42AA-424E-8BE9-05B7C7496537}" Directory_="APPDIR" Attributes="0" KeyPath="AxInterop.ShockwaveFlashObjects.dll"/>
+    <ROW Component="AxInterop.WMPLib.dll" ComponentId="{B7CE6933-170D-4EB2-9296-F1222C90EDB3}" Directory_="APPDIR" Attributes="0" KeyPath="AxInterop.WMPLib.dll"/>
+    <ROW Component="CrawlerLib.Net.dll" ComponentId="{604CDCEC-214E-4854-99C7-F36866264194}" Directory_="APPDIR" Attributes="0" KeyPath="CrawlerLib.Net.dll"/>
+    <ROW Component="DevExpress.Data.v11.1.dll" ComponentId="{D959F1FC-CCB6-400D-A60B-A1367A6855D8}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Data.v11.1.dll"/>
+    <ROW Component="DevExpress.Data.v11.1.xml" ComponentId="{FD1C0300-F86C-4523-9742-A7F2519FC461}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Data.v11.1.xml" Type="0"/>
+    <ROW Component="DevExpress.Printing.v11.1.Core.dll" ComponentId="{FCF5DC96-D419-4446-8F89-93973C13383E}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Printing.v11.1.Core.dll"/>
+    <ROW Component="DevExpress.Utils.v11.1.dll" ComponentId="{ABD06213-7179-4611-9327-7B110B0EE4A2}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Utils.v11.1.dll"/>
+    <ROW Component="DevExpress.XtraBars.v11.1.dll" ComponentId="{3BDE2BE4-88C9-4208-96E7-FDF74B4D3AF4}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraBars.v11.1.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v11.1.dll" ComponentId="{A3EBF4E6-C545-4CBE-948C-8BD290A5E9AF}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraEditors.v11.1.dll"/>
+    <ROW Component="HtmlAgilityPack.dll" ComponentId="{11B61F89-686B-4379-9A5F-857A97F376EE}" Directory_="APPDIR" Attributes="0" KeyPath="HtmlAgilityPack.dll"/>
+    <ROW Component="Interop.ShockwaveFlashObjects.dll" ComponentId="{E276D0E0-7092-44B0-BDE1-7EAFDFC0C183}" Directory_="APPDIR" Attributes="0" KeyPath="Interop.ShockwaveFlashObjects.dll"/>
+    <ROW Component="Interop.WMPLib.dll" ComponentId="{CEAA1D8F-F057-4C95-816C-8D44E299A0FD}" Directory_="APPDIR" Attributes="0" KeyPath="Interop.WMPLib.dll"/>
+    <ROW Component="TVKControls.dll" ComponentId="{7809DE7E-2CC1-402B-92B4-48112503BCC5}" Directory_="APPDIR" Attributes="0" KeyPath="TVKControls.dll"/>
+    <ROW Component="TVKing" ComponentId="{07DF35A5-DDAB-456A-B523-14CC6D3E6018}" Directory_="TVKing_DIR" Attributes="0"/>
+    <ROW Component="TVKing2.exe" ComponentId="{65CFB375-EA3B-4CB0-B5C1-85C4DE964390}" Directory_="APPDIR" Attributes="0" KeyPath="TVKing2.exe"/>
+    <ROW Component="TVKingSkin.dll" ComponentId="{A7335601-30C3-4C74-B368-A0FA56D19C84}" Directory_="APPDIR" Attributes="0" KeyPath="TVKingSkin.dll"/>
+    <ROW Component="tvking_updater.exe" ComponentId="{035B2E32-7FF5-424C-A434-AC963586C483}" Directory_="APPDIR" Attributes="0" KeyPath="tvking_updater.exe"/>
+    <ROW Component="x250_eye.gif" ComponentId="{F24C9A80-48B5-45BC-B720-5581AA063A18}" Directory_="images_Dir" Attributes="0" KeyPath="x250_eye.gif" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="AFGHANISTAN.bmp AI_ExePath AxInterop.ShockwaveFlashObjects.dll AxInterop.WMPLib.dll CrawlerLib.Net.dll DevExpress.Data.v11.1.dll DevExpress.Data.v11.1.xml DevExpress.Printing.v11.1.Core.dll DevExpress.Utils.v11.1.dll DevExpress.XtraBars.v11.1.dll DevExpress.XtraEditors.v11.1.dll HtmlAgilityPack.dll Interop.ShockwaveFlashObjects.dll Interop.WMPLib.dll TVKControls.dll TVKing TVKing2.exe TVKingSkin.dll tvking_updater.exe x250_eye.gif"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AFGHANISTAN.bmp" Component_="AFGHANISTAN.bmp" FileName="AFGHAN~1.bmp|AFGHANISTAN.bmp" Attributes="0" SourcePath="images\flags\AFGHANISTAN.bmp" SelfReg="false" NextFile="ALBANIA.bmp"/>
+    <ROW File="ALBANIA.bmp" Component_="AFGHANISTAN.bmp" FileName="ALBANIA.bmp" Attributes="0" SourcePath="images\flags\ALBANIA.bmp" SelfReg="false" NextFile="ALGERIA.bmp"/>
+    <ROW File="ALGERIA.bmp" Component_="AFGHANISTAN.bmp" FileName="ALGERIA.bmp" Attributes="0" SourcePath="images\flags\ALGERIA.bmp" SelfReg="false" NextFile="AMERICAN_SAMOA.bmp"/>
+    <ROW File="AMERICAN_SAMOA.bmp" Component_="AFGHANISTAN.bmp" FileName="AMERIC~1.bmp|AMERICAN SAMOA.bmp" Attributes="0" SourcePath="images\flags\AMERICAN SAMOA.bmp" SelfReg="false" NextFile="ANDORRA.bmp"/>
+    <ROW File="ANDORRA.bmp" Component_="AFGHANISTAN.bmp" FileName="ANDORRA.bmp" Attributes="0" SourcePath="images\flags\ANDORRA.bmp" SelfReg="false" NextFile="ANGOLA.bmp"/>
+    <ROW File="ANGOLA.bmp" Component_="AFGHANISTAN.bmp" FileName="ANGOLA.bmp" Attributes="0" SourcePath="images\flags\ANGOLA.bmp" SelfReg="false" NextFile="ANGUILLA.bmp"/>
+    <ROW File="ANGUILLA.bmp" Component_="AFGHANISTAN.bmp" FileName="ANGUILLA.bmp" Attributes="0" SourcePath="images\flags\ANGUILLA.bmp" SelfReg="false" NextFile="ANTARCTICA.bmp"/>
+    <ROW File="ANTARCTICA.bmp" Component_="AFGHANISTAN.bmp" FileName="ANTARC~1.bmp|ANTARCTICA.bmp" Attributes="0" SourcePath="images\flags\ANTARCTICA.bmp" SelfReg="false" NextFile="ANTIGUA.bmp"/>
+    <ROW File="ANTIGUA.bmp" Component_="AFGHANISTAN.bmp" FileName="ANTIGUA.bmp" Attributes="0" SourcePath="images\flags\ANTIGUA.bmp" SelfReg="false" NextFile="ARGENTINA.bmp"/>
+    <ROW File="ARGENTINA.bmp" Component_="AFGHANISTAN.bmp" FileName="ARGENT~1.bmp|ARGENTINA.bmp" Attributes="0" SourcePath="images\flags\ARGENTINA.bmp" SelfReg="false" NextFile="ARMENIA.bmp"/>
+    <ROW File="ARMENIA.bmp" Component_="AFGHANISTAN.bmp" FileName="ARMENIA.bmp" Attributes="0" SourcePath="images\flags\ARMENIA.bmp" SelfReg="false" NextFile="ARUBA.bmp"/>
+    <ROW File="ARUBA.bmp" Component_="AFGHANISTAN.bmp" FileName="ARUBA.bmp" Attributes="0" SourcePath="images\flags\ARUBA.bmp" SelfReg="false" NextFile="AUSTRALIA.bmp"/>
+    <ROW File="AUSTRALIA.bmp" Component_="AFGHANISTAN.bmp" FileName="AUSTRA~1.bmp|AUSTRALIA.bmp" Attributes="0" SourcePath="images\flags\AUSTRALIA.bmp" SelfReg="false" NextFile="AUSTRIA.bmp"/>
+    <ROW File="AUSTRIA.bmp" Component_="AFGHANISTAN.bmp" FileName="AUSTRIA.bmp" Attributes="0" SourcePath="images\flags\AUSTRIA.bmp" SelfReg="false" NextFile="AZERBAIJAN.bmp"/>
+    <ROW File="AZERBAIJAN.bmp" Component_="AFGHANISTAN.bmp" FileName="AZERBA~1.bmp|AZERBAIJAN.bmp" Attributes="0" SourcePath="images\flags\AZERBAIJAN.bmp" SelfReg="false" NextFile="BAHAMAS.bmp"/>
+    <ROW File="AxInterop.ShockwaveFlashObjects.dll" Component_="AxInterop.ShockwaveFlashObjects.dll" FileName="AxInte~2.dll|AxInterop.ShockwaveFlashObjects.dll" Attributes="0" SourcePath="TVKing2\bin\Release\AxInterop.ShockwaveFlashObjects.dll" SelfReg="false" NextFile="AxInterop.WMPLib.dll"/>
+    <ROW File="AxInterop.WMPLib.dll" Component_="AxInterop.WMPLib.dll" FileName="AxInte~3.dll|AxInterop.WMPLib.dll" Attributes="0" SourcePath="TVKing2\bin\Release\AxInterop.WMPLib.dll" SelfReg="false" NextFile="Interop.ShockwaveFlashObjects.dll"/>
+    <ROW File="BAHAMAS.bmp" Component_="AFGHANISTAN.bmp" FileName="BAHAMAS.bmp" Attributes="0" SourcePath="images\flags\BAHAMAS.bmp" SelfReg="false" NextFile="BAHRAIN.bmp"/>
+    <ROW File="BAHRAIN.bmp" Component_="AFGHANISTAN.bmp" FileName="BAHRAIN.bmp" Attributes="0" SourcePath="images\flags\BAHRAIN.bmp" SelfReg="false" NextFile="BANGLADESH.bmp"/>
+    <ROW File="BANGLADESH.bmp" Component_="AFGHANISTAN.bmp" FileName="BANGLA~1.bmp|BANGLADESH.bmp" Attributes="0" SourcePath="images\flags\BANGLADESH.bmp" SelfReg="false" NextFile="BARBADOS.bmp"/>
+    <ROW File="BARBADOS.bmp" Component_="AFGHANISTAN.bmp" FileName="BARBADOS.bmp" Attributes="0" SourcePath="images\flags\BARBADOS.bmp" SelfReg="false" NextFile="BELARUS.bmp"/>
+    <ROW File="BELARUS.bmp" Component_="AFGHANISTAN.bmp" FileName="BELARUS.bmp" Attributes="0" SourcePath="images\flags\BELARUS.bmp" SelfReg="false" NextFile="BELGIUM.bmp"/>
+    <ROW File="BELGIUM.bmp" Component_="AFGHANISTAN.bmp" FileName="BELGIUM.bmp" Attributes="0" SourcePath="images\flags\BELGIUM.bmp" SelfReg="false" NextFile="BELIZE.bmp"/>
+    <ROW File="BELIZE.bmp" Component_="AFGHANISTAN.bmp" FileName="BELIZE.bmp" Attributes="0" SourcePath="images\flags\BELIZE.bmp" SelfReg="false" NextFile="BENIN.bmp"/>
+    <ROW File="BENIN.bmp" Component_="AFGHANISTAN.bmp" FileName="BENIN.bmp" Attributes="0" SourcePath="images\flags\BENIN.bmp" SelfReg="false" NextFile="BERMUDA.bmp"/>
+    <ROW File="BERMUDA.bmp" Component_="AFGHANISTAN.bmp" FileName="BERMUDA.bmp" Attributes="0" SourcePath="images\flags\BERMUDA.bmp" SelfReg="false" NextFile="BHUTAN.bmp"/>
+    <ROW File="BHUTAN.bmp" Component_="AFGHANISTAN.bmp" FileName="BHUTAN.bmp" Attributes="0" SourcePath="images\flags\BHUTAN.bmp" SelfReg="false" NextFile="BOLIVIA.bmp"/>
+    <ROW File="BOLIVIA.bmp" Component_="AFGHANISTAN.bmp" FileName="BOLIVIA.bmp" Attributes="0" SourcePath="images\flags\BOLIVIA.bmp" SelfReg="false" NextFile="BOSNIA_HERZEGOVINA.bmp"/>
+    <ROW File="BOSNIA_HERZEGOVINA.bmp" Component_="AFGHANISTAN.bmp" FileName="BOSNIA~1.bmp|BOSNIA-HERZEGOVINA.bmp" Attributes="0" SourcePath="images\flags\BOSNIA-HERZEGOVINA.bmp" SelfReg="false" NextFile="BOTSWANA.bmp"/>
+    <ROW File="BOTSWANA.bmp" Component_="AFGHANISTAN.bmp" FileName="BOTSWANA.bmp" Attributes="0" SourcePath="images\flags\BOTSWANA.bmp" SelfReg="false" NextFile="BOUVET_ISLAND.bmp"/>
+    <ROW File="BOUVET_ISLAND.bmp" Component_="AFGHANISTAN.bmp" FileName="BOUVET~1.bmp|BOUVET ISLAND.bmp" Attributes="0" SourcePath="images\flags\BOUVET ISLAND.bmp" SelfReg="false" NextFile="BRAZIL.bmp"/>
+    <ROW File="BRAZIL.bmp" Component_="AFGHANISTAN.bmp" FileName="BRAZIL.bmp" Attributes="0" SourcePath="images\flags\BRAZIL.bmp" SelfReg="false" NextFile="BRUNEI.bmp"/>
+    <ROW File="BRUNEI.bmp" Component_="AFGHANISTAN.bmp" FileName="BRUNEI.bmp" Attributes="0" SourcePath="images\flags\BRUNEI.bmp" SelfReg="false" NextFile="BULGARIA.bmp"/>
+    <ROW File="BULGARIA.bmp" Component_="AFGHANISTAN.bmp" FileName="BULGARIA.bmp" Attributes="0" SourcePath="images\flags\BULGARIA.bmp" SelfReg="false" NextFile="BURKINA_FASO.bmp"/>
+    <ROW File="BURKINA_FASO.bmp" Component_="AFGHANISTAN.bmp" FileName="BURKIN~1.bmp|BURKINA FASO.bmp" Attributes="0" SourcePath="images\flags\BURKINA FASO.bmp" SelfReg="false" NextFile="BURUNDI.bmp"/>
+    <ROW File="BURUNDI.bmp" Component_="AFGHANISTAN.bmp" FileName="BURUNDI.bmp" Attributes="0" SourcePath="images\flags\BURUNDI.bmp" SelfReg="false" NextFile="CAMBODIA.bmp"/>
+    <ROW File="CAMBODIA.bmp" Component_="AFGHANISTAN.bmp" FileName="CAMBODIA.bmp" Attributes="0" SourcePath="images\flags\CAMBODIA.bmp" SelfReg="false" NextFile="CAMEROON.bmp"/>
+    <ROW File="CAMEROON.bmp" Component_="AFGHANISTAN.bmp" FileName="CAMEROON.bmp" Attributes="0" SourcePath="images\flags\CAMEROON.bmp" SelfReg="false" NextFile="CANADA.bmp"/>
+    <ROW File="CANADA.bmp" Component_="AFGHANISTAN.bmp" FileName="CANADA.bmp" Attributes="0" SourcePath="images\flags\CANADA.bmp" SelfReg="false" NextFile="CAPE_VERDE.bmp"/>
+    <ROW File="CAPE_VERDE.bmp" Component_="AFGHANISTAN.bmp" FileName="CAPEVE~1.bmp|CAPE VERDE.bmp" Attributes="0" SourcePath="images\flags\CAPE VERDE.bmp" SelfReg="false" NextFile="CAYMAN_ISLANDS.bmp"/>
+    <ROW File="CAYMAN_ISLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="CAYMAN~1.bmp|CAYMAN ISLANDS.bmp" Attributes="0" SourcePath="images\flags\CAYMAN ISLANDS.bmp" SelfReg="false" NextFile="CENTRAL_AFRICAN_REPUBLIC.bmp"/>
+    <ROW File="CENTRAL_AFRICAN_REPUBLIC.bmp" Component_="AFGHANISTAN.bmp" FileName="CENTRA~1.bmp|CENTRAL AFRICAN REPUBLIC.bmp" Attributes="0" SourcePath="images\flags\CENTRAL AFRICAN REPUBLIC.bmp" SelfReg="false" NextFile="CHAD.bmp"/>
+    <ROW File="CHAD.bmp" Component_="AFGHANISTAN.bmp" FileName="CHAD.bmp" Attributes="0" SourcePath="images\flags\CHAD.bmp" SelfReg="false" NextFile="CHILE.bmp"/>
+    <ROW File="CHILE.bmp" Component_="AFGHANISTAN.bmp" FileName="CHILE.bmp" Attributes="0" SourcePath="images\flags\CHILE.bmp" SelfReg="false" NextFile="CHINA.bmp"/>
+    <ROW File="CHINA.bmp" Component_="AFGHANISTAN.bmp" FileName="CHINA.bmp" Attributes="0" SourcePath="images\flags\CHINA.bmp" SelfReg="false" NextFile="CHRISTMAS_ISLAND.bmp"/>
+    <ROW File="CHRISTMAS_ISLAND.bmp" Component_="AFGHANISTAN.bmp" FileName="CHRIST~1.bmp|CHRISTMAS ISLAND.bmp" Attributes="0" SourcePath="images\flags\CHRISTMAS ISLAND.bmp" SelfReg="false" NextFile="COLOMBIA.bmp"/>
+    <ROW File="COLOMBIA.bmp" Component_="AFGHANISTAN.bmp" FileName="COLOMBIA.bmp" Attributes="0" SourcePath="images\flags\COLOMBIA.bmp" SelfReg="false" NextFile="COMOROS.bmp"/>
+    <ROW File="COMOROS.bmp" Component_="AFGHANISTAN.bmp" FileName="COMOROS.bmp" Attributes="0" SourcePath="images\flags\COMOROS.bmp" SelfReg="false" NextFile="CONGO.bmp"/>
+    <ROW File="CONGO.bmp" Component_="AFGHANISTAN.bmp" FileName="CONGO.bmp" Attributes="0" SourcePath="images\flags\CONGO.bmp" SelfReg="false" NextFile="COOK_ISLANDS.bmp"/>
+    <ROW File="COOK_ISLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="COOKIS~1.bmp|COOK ISLANDS.bmp" Attributes="0" SourcePath="images\flags\COOK ISLANDS.bmp" SelfReg="false" NextFile="COSTA_RICA.bmp"/>
+    <ROW File="COSTA_RICA.bmp" Component_="AFGHANISTAN.bmp" FileName="COSTAR~1.bmp|COSTA RICA.bmp" Attributes="0" SourcePath="images\flags\COSTA RICA.bmp" SelfReg="false" NextFile="COTE_D_IVOIRE.bmp"/>
+    <ROW File="COTE_D_IVOIRE.bmp" Component_="AFGHANISTAN.bmp" FileName="COTED&apos;~1.bmp|COTE D&apos;IVOIRE.bmp" Attributes="0" SourcePath="images\flags\COTE D&apos;IVOIRE.bmp" SelfReg="false" NextFile="CROATIA.bmp"/>
+    <ROW File="CROATIA.bmp" Component_="AFGHANISTAN.bmp" FileName="CROATIA.bmp" Attributes="0" SourcePath="images\flags\CROATIA.bmp" SelfReg="false" NextFile="CUBA.bmp"/>
+    <ROW File="CUBA.bmp" Component_="AFGHANISTAN.bmp" FileName="CUBA.bmp" Attributes="0" SourcePath="images\flags\CUBA.bmp" SelfReg="false" NextFile="CYPRUS.bmp"/>
+    <ROW File="CYPRUS.bmp" Component_="AFGHANISTAN.bmp" FileName="CYPRUS.bmp" Attributes="0" SourcePath="images\flags\CYPRUS.bmp" SelfReg="false" NextFile="CZECH_REP.bmp"/>
+    <ROW File="CZECH_REP.bmp" Component_="AFGHANISTAN.bmp" FileName="CZECHR~1.bmp|CZECH REP.bmp" Attributes="0" SourcePath="images\flags\CZECH REP.bmp" SelfReg="false" NextFile="DENMARK.bmp"/>
+    <ROW File="Copyright.png" Component_="x250_eye.gif" FileName="Copyri~1.png|Copyright.png" Attributes="0" SourcePath="images\images\Copyright.png" SelfReg="false" NextFile="default.png"/>
+    <ROW File="CrawlerLib.Net.dll" Component_="CrawlerLib.Net.dll" FileName="Crawle~1.dll|CrawlerLib.Net.dll" Attributes="0" SourcePath="TVKing2\bin\Release\CrawlerLib.Net.dll" SelfReg="false" NextFile="HtmlAgilityPack.dll"/>
+    <ROW File="DENMARK.bmp" Component_="AFGHANISTAN.bmp" FileName="DENMARK.bmp" Attributes="0" SourcePath="images\flags\DENMARK.bmp" SelfReg="false" NextFile="DJIBOUTI.bmp"/>
+    <ROW File="DJIBOUTI.bmp" Component_="AFGHANISTAN.bmp" FileName="DJIBOUTI.bmp" Attributes="0" SourcePath="images\flags\DJIBOUTI.bmp" SelfReg="false" NextFile="DOMINICAN_REPUBLIC.bmp"/>
+    <ROW File="DOMINICAN_REPUBLIC.bmp" Component_="AFGHANISTAN.bmp" FileName="DOMINI~1.bmp|DOMINICAN REPUBLIC.bmp" Attributes="0" SourcePath="images\flags\DOMINICAN REPUBLIC.bmp" SelfReg="false" NextFile="ECUADOR.bmp"/>
+    <ROW File="DevExpress.Data.v11.1.dll" Component_="DevExpress.Data.v11.1.dll" FileName="DevExp~1.dll|DevExpress.Data.v11.1.dll" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.Data.v11.1.dll" SelfReg="false" NextFile="DevExpress.Data.v11.1.xml"/>
+    <ROW File="DevExpress.Data.v11.1.xml" Component_="DevExpress.Data.v11.1.xml" FileName="DevExp~1.xml|DevExpress.Data.v11.1.xml" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.Data.v11.1.xml" SelfReg="false" NextFile="DevExpress.Printing.v11.1.Core.dll"/>
+    <ROW File="DevExpress.Printing.v11.1.Core.dll" Component_="DevExpress.Printing.v11.1.Core.dll" FileName="DevExp~2.dll|DevExpress.Printing.v11.1.Core.dll" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.Printing.v11.1.Core.dll" SelfReg="false" NextFile="DevExpress.Utils.v11.1.dll"/>
+    <ROW File="DevExpress.Utils.v11.1.dll" Component_="DevExpress.Utils.v11.1.dll" FileName="DevExp~3.dll|DevExpress.Utils.v11.1.dll" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.Utils.v11.1.dll" SelfReg="false" NextFile="DevExpress.Utils.v11.1.xml"/>
+    <ROW File="DevExpress.Utils.v11.1.xml" Component_="DevExpress.Data.v11.1.xml" FileName="DevExp~2.xml|DevExpress.Utils.v11.1.xml" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.Utils.v11.1.xml" SelfReg="false" NextFile="DevExpress.XtraEditors.v11.1.dll"/>
+    <ROW File="DevExpress.XtraBars.v11.1.dll" Component_="DevExpress.XtraBars.v11.1.dll" FileName="DevExp~5.dll|DevExpress.XtraBars.v11.1.dll" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.XtraBars.v11.1.dll" SelfReg="false" NextFile="DevExpress.XtraBars.v11.1.xml"/>
+    <ROW File="DevExpress.XtraBars.v11.1.xml" Component_="DevExpress.Data.v11.1.xml" FileName="DevExp~4.xml|DevExpress.XtraBars.v11.1.xml" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.XtraBars.v11.1.xml" SelfReg="false" NextFile="tvking_updater.exe"/>
+    <ROW File="DevExpress.XtraEditors.v11.1.dll" Component_="DevExpress.XtraEditors.v11.1.dll" FileName="DevExp~4.dll|DevExpress.XtraEditors.v11.1.dll" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.XtraEditors.v11.1.dll" SelfReg="false" NextFile="DevExpress.XtraEditors.v11.1.xml"/>
+    <ROW File="DevExpress.XtraEditors.v11.1.xml" Component_="DevExpress.Data.v11.1.xml" FileName="DevExp~3.xml|DevExpress.XtraEditors.v11.1.xml" Attributes="0" SourcePath="TVKing2\bin\Release\DevExpress.XtraEditors.v11.1.xml" SelfReg="false" NextFile="DevExpress.XtraBars.v11.1.dll"/>
+    <ROW File="ECUADOR.bmp" Component_="AFGHANISTAN.bmp" FileName="ECUADOR.bmp" Attributes="0" SourcePath="images\flags\ECUADOR.bmp" SelfReg="false" NextFile="EGYPT.bmp"/>
+    <ROW File="EGYPT.bmp" Component_="AFGHANISTAN.bmp" FileName="EGYPT.bmp" Attributes="0" SourcePath="images\flags\EGYPT.bmp" SelfReg="false" NextFile="EL_SALVADOR.bmp"/>
+    <ROW File="EL_SALVADOR.bmp" Component_="AFGHANISTAN.bmp" FileName="ELSALV~1.bmp|EL SALVADOR.bmp" Attributes="0" SourcePath="images\flags\EL SALVADOR.bmp" SelfReg="false" NextFile="EQUATORIAL_GUINEA.bmp"/>
+    <ROW File="EQUATORIAL_GUINEA.bmp" Component_="AFGHANISTAN.bmp" FileName="EQUATO~1.bmp|EQUATORIAL GUINEA.bmp" Attributes="0" SourcePath="images\flags\EQUATORIAL GUINEA.bmp" SelfReg="false" NextFile="ERITREA.bmp"/>
+    <ROW File="ERITREA.bmp" Component_="AFGHANISTAN.bmp" FileName="ERITREA.bmp" Attributes="0" SourcePath="images\flags\ERITREA.bmp" SelfReg="false" NextFile="ESTONIA.bmp"/>
+    <ROW File="ESTONIA.bmp" Component_="AFGHANISTAN.bmp" FileName="ESTONIA.bmp" Attributes="0" SourcePath="images\flags\ESTONIA.bmp" SelfReg="false" NextFile="ETHIOPIA.bmp"/>
+    <ROW File="ETHIOPIA.bmp" Component_="AFGHANISTAN.bmp" FileName="ETHIOPIA.bmp" Attributes="0" SourcePath="images\flags\ETHIOPIA.bmp" SelfReg="false" NextFile="FALKLAND_ISLANDS.bmp"/>
+    <ROW File="FALKLAND_ISLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="FALKLA~1.bmp|FALKLAND ISLANDS.bmp" Attributes="0" SourcePath="images\flags\FALKLAND ISLANDS.bmp" SelfReg="false" NextFile="FAROE_ISLANDS.bmp"/>
+    <ROW File="FAROE_ISLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="FAROEI~1.bmp|FAROE ISLANDS.bmp" Attributes="0" SourcePath="images\flags\FAROE ISLANDS.bmp" SelfReg="false" NextFile="FIJI.bmp"/>
+    <ROW File="FIJI.bmp" Component_="AFGHANISTAN.bmp" FileName="FIJI.bmp" Attributes="0" SourcePath="images\flags\FIJI.bmp" SelfReg="false" NextFile="FINLAND.bmp"/>
+    <ROW File="FINLAND.bmp" Component_="AFGHANISTAN.bmp" FileName="FINLAND.bmp" Attributes="0" SourcePath="images\flags\FINLAND.bmp" SelfReg="false" NextFile="FRANCE.bmp"/>
+    <ROW File="FRANCE.bmp" Component_="AFGHANISTAN.bmp" FileName="FRANCE.bmp" Attributes="0" SourcePath="images\flags\FRANCE.bmp" SelfReg="false" NextFile="FRENCH_GUIANA.bmp"/>
+    <ROW File="FRENCH_GUIANA.bmp" Component_="AFGHANISTAN.bmp" FileName="FRENCH~1.bmp|FRENCH GUIANA.bmp" Attributes="0" SourcePath="images\flags\FRENCH GUIANA.bmp" SelfReg="false" NextFile="FRENCH_POLYNESIA.bmp"/>
+    <ROW File="FRENCH_POLYNESIA.bmp" Component_="AFGHANISTAN.bmp" FileName="FRENCH~2.bmp|FRENCH POLYNESIA.bmp" Attributes="0" SourcePath="images\flags\FRENCH POLYNESIA.bmp" SelfReg="false" NextFile="GABON.bmp"/>
+    <ROW File="GABON.bmp" Component_="AFGHANISTAN.bmp" FileName="GABON.bmp" Attributes="0" SourcePath="images\flags\GABON.bmp" SelfReg="false" NextFile="GEORGIA.bmp"/>
+    <ROW File="GEORGIA.bmp" Component_="AFGHANISTAN.bmp" FileName="GEORGIA.bmp" Attributes="0" SourcePath="images\flags\GEORGIA.bmp" SelfReg="false" NextFile="GERMANY.bmp"/>
+    <ROW File="GERMANY.bmp" Component_="AFGHANISTAN.bmp" FileName="GERMANY.bmp" Attributes="0" SourcePath="images\flags\GERMANY.bmp" SelfReg="false" NextFile="GHANA.bmp"/>
+    <ROW File="GHANA.bmp" Component_="AFGHANISTAN.bmp" FileName="GHANA.bmp" Attributes="0" SourcePath="images\flags\GHANA.bmp" SelfReg="false" NextFile="GIBRALTAR.bmp"/>
+    <ROW File="GIBRALTAR.bmp" Component_="AFGHANISTAN.bmp" FileName="GIBRAL~1.bmp|GIBRALTAR.bmp" Attributes="0" SourcePath="images\flags\GIBRALTAR.bmp" SelfReg="false" NextFile="GREECE.bmp"/>
+    <ROW File="GREECE.bmp" Component_="AFGHANISTAN.bmp" FileName="GREECE.bmp" Attributes="0" SourcePath="images\flags\GREECE.bmp" SelfReg="false" NextFile="GREENLAND.bmp"/>
+    <ROW File="GREENLAND.bmp" Component_="AFGHANISTAN.bmp" FileName="GREENL~1.bmp|GREENLAND.bmp" Attributes="0" SourcePath="images\flags\GREENLAND.bmp" SelfReg="false" NextFile="GRENADA.bmp"/>
+    <ROW File="GRENADA.bmp" Component_="AFGHANISTAN.bmp" FileName="GRENADA.bmp" Attributes="0" SourcePath="images\flags\GRENADA.bmp" SelfReg="false" NextFile="GUADELOUPE.bmp"/>
+    <ROW File="GUADELOUPE.bmp" Component_="AFGHANISTAN.bmp" FileName="GUADEL~1.bmp|GUADELOUPE.bmp" Attributes="0" SourcePath="images\flags\GUADELOUPE.bmp" SelfReg="false" NextFile="GUAM.bmp"/>
+    <ROW File="GUAM.bmp" Component_="AFGHANISTAN.bmp" FileName="GUAM.bmp" Attributes="0" SourcePath="images\flags\GUAM.bmp" SelfReg="false" NextFile="GUATEMALA.bmp"/>
+    <ROW File="GUATEMALA.bmp" Component_="AFGHANISTAN.bmp" FileName="GUATEM~1.bmp|GUATEMALA.bmp" Attributes="0" SourcePath="images\flags\GUATEMALA.bmp" SelfReg="false" NextFile="GUINEA.bmp"/>
+    <ROW File="GUINEA.bmp" Component_="AFGHANISTAN.bmp" FileName="GUINEA.bmp" Attributes="0" SourcePath="images\flags\GUINEA.bmp" SelfReg="false" NextFile="GUYANA.bmp"/>
+    <ROW File="GUYANA.bmp" Component_="AFGHANISTAN.bmp" FileName="GUYANA.bmp" Attributes="0" SourcePath="images\flags\GUYANA.bmp" SelfReg="false" NextFile="HAITI.bmp"/>
+    <ROW File="HAITI.bmp" Component_="AFGHANISTAN.bmp" FileName="HAITI.bmp" Attributes="0" SourcePath="images\flags\HAITI.bmp" SelfReg="false" NextFile="HONDURAS.bmp"/>
+    <ROW File="HONDURAS.bmp" Component_="AFGHANISTAN.bmp" FileName="HONDURAS.bmp" Attributes="0" SourcePath="images\flags\HONDURAS.bmp" SelfReg="false" NextFile="HONG_KONG.bmp"/>
+    <ROW File="HONG_KONG.bmp" Component_="AFGHANISTAN.bmp" FileName="HONGKO~1.bmp|HONG KONG.bmp" Attributes="0" SourcePath="images\flags\HONG KONG.bmp" SelfReg="false" NextFile="HUNGARY.bmp"/>
+    <ROW File="HUNGARY.bmp" Component_="AFGHANISTAN.bmp" FileName="HUNGARY.bmp" Attributes="0" SourcePath="images\flags\HUNGARY.bmp" SelfReg="false" NextFile="ICELAND.bmp"/>
+    <ROW File="HtmlAgilityPack.dll" Component_="HtmlAgilityPack.dll" FileName="HtmlAg~1.dll|HtmlAgilityPack.dll" Attributes="0" SourcePath="TVKing2\bin\Release\HtmlAgilityPack.dll" SelfReg="false" NextFile="TVKingSkin.dll"/>
+    <ROW File="ICELAND.bmp" Component_="AFGHANISTAN.bmp" FileName="ICELAND.bmp" Attributes="0" SourcePath="images\flags\ICELAND.bmp" SelfReg="false" NextFile="INDIA.bmp"/>
+    <ROW File="INDIA.bmp" Component_="AFGHANISTAN.bmp" FileName="INDIA.bmp" Attributes="0" SourcePath="images\flags\INDIA.bmp" SelfReg="false" NextFile="INDONESIA.bmp"/>
+    <ROW File="INDONESIA.bmp" Component_="AFGHANISTAN.bmp" FileName="INDONE~1.bmp|INDONESIA.bmp" Attributes="0" SourcePath="images\flags\INDONESIA.bmp" SelfReg="false" NextFile="IRAN.bmp"/>
+    <ROW File="IRAN.bmp" Component_="AFGHANISTAN.bmp" FileName="IRAN.bmp" Attributes="0" SourcePath="images\flags\IRAN.bmp" SelfReg="false" NextFile="IRAQ.bmp"/>
+    <ROW File="IRAQ.bmp" Component_="AFGHANISTAN.bmp" FileName="IRAQ.bmp" Attributes="0" SourcePath="images\flags\IRAQ.bmp" SelfReg="false" NextFile="IRELAND.bmp"/>
+    <ROW File="IRELAND.bmp" Component_="AFGHANISTAN.bmp" FileName="IRELAND.bmp" Attributes="0" SourcePath="images\flags\IRELAND.bmp" SelfReg="false" NextFile="ISRAEL.bmp"/>
+    <ROW File="ISRAEL.bmp" Component_="AFGHANISTAN.bmp" FileName="ISRAEL.bmp" Attributes="0" SourcePath="images\flags\ISRAEL.bmp" SelfReg="false" NextFile="ITALY.bmp"/>
+    <ROW File="ITALY.bmp" Component_="AFGHANISTAN.bmp" FileName="ITALY.bmp" Attributes="0" SourcePath="images\flags\ITALY.bmp" SelfReg="false" NextFile="JAMAICA.bmp"/>
+    <ROW File="Interop.ShockwaveFlashObjects.dll" Component_="Interop.ShockwaveFlashObjects.dll" FileName="Intero~2.dll|Interop.ShockwaveFlashObjects.dll" Attributes="0" SourcePath="TVKing2\bin\Release\Interop.ShockwaveFlashObjects.dll" SelfReg="false" NextFile="Interop.WMPLib.dll"/>
+    <ROW File="Interop.WMPLib.dll" Component_="Interop.WMPLib.dll" FileName="Intero~3.dll|Interop.WMPLib.dll" Attributes="0" SourcePath="TVKing2\bin\Release\Interop.WMPLib.dll" SelfReg="false" NextFile="TVKControls.dll"/>
+    <ROW File="JAMAICA.bmp" Component_="AFGHANISTAN.bmp" FileName="JAMAICA.bmp" Attributes="0" SourcePath="images\flags\JAMAICA.bmp" SelfReg="false" NextFile="JAPAN.bmp"/>
+    <ROW File="JAPAN.bmp" Component_="AFGHANISTAN.bmp" FileName="JAPAN.bmp" Attributes="0" SourcePath="images\flags\JAPAN.bmp" SelfReg="false" NextFile="JORDAN.bmp"/>
+    <ROW File="JORDAN.bmp" Component_="AFGHANISTAN.bmp" FileName="JORDAN.bmp" Attributes="0" SourcePath="images\flags\JORDAN.bmp" SelfReg="false" NextFile="KAZAKHSTAN.bmp"/>
+    <ROW File="KAZAKHSTAN.bmp" Component_="AFGHANISTAN.bmp" FileName="KAZAKH~1.bmp|KAZAKHSTAN.bmp" Attributes="0" SourcePath="images\flags\KAZAKHSTAN.bmp" SelfReg="false" NextFile="KENYA.bmp"/>
+    <ROW File="KENYA.bmp" Component_="AFGHANISTAN.bmp" FileName="KENYA.bmp" Attributes="0" SourcePath="images\flags\KENYA.bmp" SelfReg="false" NextFile="KIRIBATI.bmp"/>
+    <ROW File="KIRIBATI.bmp" Component_="AFGHANISTAN.bmp" FileName="KIRIBATI.bmp" Attributes="0" SourcePath="images\flags\KIRIBATI.bmp" SelfReg="false" NextFile="KOREA.bmp"/>
+    <ROW File="KOREA.bmp" Component_="AFGHANISTAN.bmp" FileName="KOREA.bmp" Attributes="0" SourcePath="images\flags\KOREA.bmp" SelfReg="false" NextFile="KUWAIT.bmp"/>
+    <ROW File="KUWAIT.bmp" Component_="AFGHANISTAN.bmp" FileName="KUWAIT.bmp" Attributes="0" SourcePath="images\flags\KUWAIT.bmp" SelfReg="false" NextFile="KYRGYZSTAN.bmp"/>
+    <ROW File="KYRGYZSTAN.bmp" Component_="AFGHANISTAN.bmp" FileName="KYRGYZ~1.bmp|KYRGYZSTAN.bmp" Attributes="0" SourcePath="images\flags\KYRGYZSTAN.bmp" SelfReg="false" NextFile="LAOS.bmp"/>
+    <ROW File="LAOS.bmp" Component_="AFGHANISTAN.bmp" FileName="LAOS.bmp" Attributes="0" SourcePath="images\flags\LAOS.bmp" SelfReg="false" NextFile="LATVIA.bmp"/>
+    <ROW File="LATVIA.bmp" Component_="AFGHANISTAN.bmp" FileName="LATVIA.bmp" Attributes="0" SourcePath="images\flags\LATVIA.bmp" SelfReg="false" NextFile="LEBANON.bmp"/>
+    <ROW File="LEBANON.bmp" Component_="AFGHANISTAN.bmp" FileName="LEBANON.bmp" Attributes="0" SourcePath="images\flags\LEBANON.bmp" SelfReg="false" NextFile="LESOTHO.bmp"/>
+    <ROW File="LESOTHO.bmp" Component_="AFGHANISTAN.bmp" FileName="LESOTHO.bmp" Attributes="0" SourcePath="images\flags\LESOTHO.bmp" SelfReg="false" NextFile="LIBERIA.bmp"/>
+    <ROW File="LIBERIA.bmp" Component_="AFGHANISTAN.bmp" FileName="LIBERIA.bmp" Attributes="0" SourcePath="images\flags\LIBERIA.bmp" SelfReg="false" NextFile="LIBYA.bmp"/>
+    <ROW File="LIBYA.bmp" Component_="AFGHANISTAN.bmp" FileName="LIBYA.bmp" Attributes="0" SourcePath="images\flags\LIBYA.bmp" SelfReg="false" NextFile="LIECHTENSTEIN.bmp"/>
+    <ROW File="LIECHTENSTEIN.bmp" Component_="AFGHANISTAN.bmp" FileName="LIECHT~1.bmp|LIECHTENSTEIN.bmp" Attributes="0" SourcePath="images\flags\LIECHTENSTEIN.bmp" SelfReg="false" NextFile="LITHUANIA.bmp"/>
+    <ROW File="LITHUANIA.bmp" Component_="AFGHANISTAN.bmp" FileName="LITHUA~1.bmp|LITHUANIA.bmp" Attributes="0" SourcePath="images\flags\LITHUANIA.bmp" SelfReg="false" NextFile="LUXEMBOURG.bmp"/>
+    <ROW File="LUXEMBOURG.bmp" Component_="AFGHANISTAN.bmp" FileName="LUXEMB~1.bmp|LUXEMBOURG.bmp" Attributes="0" SourcePath="images\flags\LUXEMBOURG.bmp" SelfReg="false" NextFile="MACAO.bmp"/>
+    <ROW File="MACAO.bmp" Component_="AFGHANISTAN.bmp" FileName="MACAO.bmp" Attributes="0" SourcePath="images\flags\MACAO.bmp" SelfReg="false" NextFile="MACEDONIA.bmp"/>
+    <ROW File="MACEDONIA.bmp" Component_="AFGHANISTAN.bmp" FileName="MACEDO~1.bmp|MACEDONIA.bmp" Attributes="0" SourcePath="images\flags\MACEDONIA.bmp" SelfReg="false" NextFile="MADAGASCAR.bmp"/>
+    <ROW File="MADAGASCAR.bmp" Component_="AFGHANISTAN.bmp" FileName="MADAGA~1.bmp|MADAGASCAR.bmp" Attributes="0" SourcePath="images\flags\MADAGASCAR.bmp" SelfReg="false" NextFile="MALAWI.bmp"/>
+    <ROW File="MALAWI.bmp" Component_="AFGHANISTAN.bmp" FileName="MALAWI.bmp" Attributes="0" SourcePath="images\flags\MALAWI.bmp" SelfReg="false" NextFile="MALAYSIA.bmp"/>
+    <ROW File="MALAYSIA.bmp" Component_="AFGHANISTAN.bmp" FileName="MALAYSIA.bmp" Attributes="0" SourcePath="images\flags\MALAYSIA.bmp" SelfReg="false" NextFile="MALDIVES.bmp"/>
+    <ROW File="MALDIVES.bmp" Component_="AFGHANISTAN.bmp" FileName="MALDIVES.bmp" Attributes="0" SourcePath="images\flags\MALDIVES.bmp" SelfReg="false" NextFile="MALI.bmp"/>
+    <ROW File="MALI.bmp" Component_="AFGHANISTAN.bmp" FileName="MALI.bmp" Attributes="0" SourcePath="images\flags\MALI.bmp" SelfReg="false" NextFile="MALTA.bmp"/>
+    <ROW File="MALTA.bmp" Component_="AFGHANISTAN.bmp" FileName="MALTA.bmp" Attributes="0" SourcePath="images\flags\MALTA.bmp" SelfReg="false" NextFile="MARSHALL_ISLANDS.bmp"/>
+    <ROW File="MARSHALL_ISLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="MARSHA~1.bmp|MARSHALL ISLANDS.bmp" Attributes="0" SourcePath="images\flags\MARSHALL ISLANDS.bmp" SelfReg="false" NextFile="MARTINIQUE.bmp"/>
+    <ROW File="MARTINIQUE.bmp" Component_="AFGHANISTAN.bmp" FileName="MARTIN~1.bmp|MARTINIQUE.bmp" Attributes="0" SourcePath="images\flags\MARTINIQUE.bmp" SelfReg="false" NextFile="MAURITANIA.bmp"/>
+    <ROW File="MAURITANIA.bmp" Component_="AFGHANISTAN.bmp" FileName="MAURIT~1.bmp|MAURITANIA.bmp" Attributes="0" SourcePath="images\flags\MAURITANIA.bmp" SelfReg="false" NextFile="MAURITIUS.bmp"/>
+    <ROW File="MAURITIUS.bmp" Component_="AFGHANISTAN.bmp" FileName="MAURIT~2.bmp|MAURITIUS.bmp" Attributes="0" SourcePath="images\flags\MAURITIUS.bmp" SelfReg="false" NextFile="MAYOTTE.bmp"/>
+    <ROW File="MAYOTTE.bmp" Component_="AFGHANISTAN.bmp" FileName="MAYOTTE.bmp" Attributes="0" SourcePath="images\flags\MAYOTTE.bmp" SelfReg="false" NextFile="MEXICO.bmp"/>
+    <ROW File="MEXICO.bmp" Component_="AFGHANISTAN.bmp" FileName="MEXICO.bmp" Attributes="0" SourcePath="images\flags\MEXICO.bmp" SelfReg="false" NextFile="MICRONESIA.bmp"/>
+    <ROW File="MICRONESIA.bmp" Component_="AFGHANISTAN.bmp" FileName="MICRON~1.bmp|MICRONESIA.bmp" Attributes="0" SourcePath="images\flags\MICRONESIA.bmp" SelfReg="false" NextFile="MOLDOVA.bmp"/>
+    <ROW File="MOLDOVA.bmp" Component_="AFGHANISTAN.bmp" FileName="MOLDOVA.bmp" Attributes="0" SourcePath="images\flags\MOLDOVA.bmp" SelfReg="false" NextFile="MONACO.bmp"/>
+    <ROW File="MONACO.bmp" Component_="AFGHANISTAN.bmp" FileName="MONACO.bmp" Attributes="0" SourcePath="images\flags\MONACO.bmp" SelfReg="false" NextFile="MONGOLIA.bmp"/>
+    <ROW File="MONGOLIA.bmp" Component_="AFGHANISTAN.bmp" FileName="MONGOLIA.bmp" Attributes="0" SourcePath="images\flags\MONGOLIA.bmp" SelfReg="false" NextFile="MONTSERRAT.bmp"/>
+    <ROW File="MONTSERRAT.bmp" Component_="AFGHANISTAN.bmp" FileName="MONTSE~1.bmp|MONTSERRAT.bmp" Attributes="0" SourcePath="images\flags\MONTSERRAT.bmp" SelfReg="false" NextFile="MOROCCO.bmp"/>
+    <ROW File="MOROCCO.bmp" Component_="AFGHANISTAN.bmp" FileName="MOROCCO.bmp" Attributes="0" SourcePath="images\flags\MOROCCO.bmp" SelfReg="false" NextFile="MOZAMBIQUE.bmp"/>
+    <ROW File="MOZAMBIQUE.bmp" Component_="AFGHANISTAN.bmp" FileName="MOZAMB~1.bmp|MOZAMBIQUE.bmp" Attributes="0" SourcePath="images\flags\MOZAMBIQUE.bmp" SelfReg="false" NextFile="MYANMAR.bmp"/>
+    <ROW File="MYANMAR.bmp" Component_="AFGHANISTAN.bmp" FileName="MYANMAR.bmp" Attributes="0" SourcePath="images\flags\MYANMAR.bmp" SelfReg="false" NextFile="NAMIBIA.bmp"/>
+    <ROW File="NAMIBIA.bmp" Component_="AFGHANISTAN.bmp" FileName="NAMIBIA.bmp" Attributes="0" SourcePath="images\flags\NAMIBIA.bmp" SelfReg="false" NextFile="NAURU.bmp"/>
+    <ROW File="NAURU.bmp" Component_="AFGHANISTAN.bmp" FileName="NAURU.bmp" Attributes="0" SourcePath="images\flags\NAURU.bmp" SelfReg="false" NextFile="NEPAL.bmp"/>
+    <ROW File="NEPAL.bmp" Component_="AFGHANISTAN.bmp" FileName="NEPAL.bmp" Attributes="0" SourcePath="images\flags\NEPAL.bmp" SelfReg="false" NextFile="NETHERLANDS_ANTILLES.bmp"/>
+    <ROW File="NETHERLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="NETHER~2.bmp|NETHERLANDS.bmp" Attributes="0" SourcePath="images\flags\NETHERLANDS.bmp" SelfReg="false" NextFile="NEW_CALEDONIA.bmp"/>
+    <ROW File="NETHERLANDS_ANTILLES.bmp" Component_="AFGHANISTAN.bmp" FileName="NETHER~1.bmp|NETHERLANDS ANTILLES.bmp" Attributes="0" SourcePath="images\flags\NETHERLANDS ANTILLES.bmp" SelfReg="false" NextFile="NETHERLANDS.bmp"/>
+    <ROW File="NEW_CALEDONIA.bmp" Component_="AFGHANISTAN.bmp" FileName="NEWCAL~1.bmp|NEW CALEDONIA.bmp" Attributes="0" SourcePath="images\flags\NEW CALEDONIA.bmp" SelfReg="false" NextFile="NEW_ZEALAND.bmp"/>
+    <ROW File="NEW_ZEALAND.bmp" Component_="AFGHANISTAN.bmp" FileName="NEWZEA~1.bmp|NEW ZEALAND.bmp" Attributes="0" SourcePath="images\flags\NEW ZEALAND.bmp" SelfReg="false" NextFile="NICARAGUA.bmp"/>
+    <ROW File="NICARAGUA.bmp" Component_="AFGHANISTAN.bmp" FileName="NICARA~1.bmp|NICARAGUA.bmp" Attributes="0" SourcePath="images\flags\NICARAGUA.bmp" SelfReg="false" NextFile="NIGER.bmp"/>
+    <ROW File="NIGER.bmp" Component_="AFGHANISTAN.bmp" FileName="NIGER.bmp" Attributes="0" SourcePath="images\flags\NIGER.bmp" SelfReg="false" NextFile="NIGERIA.bmp"/>
+    <ROW File="NIGERIA.bmp" Component_="AFGHANISTAN.bmp" FileName="NIGERIA.bmp" Attributes="0" SourcePath="images\flags\NIGERIA.bmp" SelfReg="false" NextFile="NIUE.bmp"/>
+    <ROW File="NIUE.bmp" Component_="AFGHANISTAN.bmp" FileName="NIUE.bmp" Attributes="0" SourcePath="images\flags\NIUE.bmp" SelfReg="false" NextFile="NORFOLK_ISLAND.bmp"/>
+    <ROW File="NORFOLK_ISLAND.bmp" Component_="AFGHANISTAN.bmp" FileName="NORFOL~1.bmp|NORFOLK ISLAND.bmp" Attributes="0" SourcePath="images\flags\NORFOLK ISLAND.bmp" SelfReg="false" NextFile="NORTHERN_MARIANA_ISLANDS.bmp"/>
+    <ROW File="NORTHERN_MARIANA_ISLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="NORTHE~1.bmp|NORTHERN MARIANA ISLANDS.bmp" Attributes="0" SourcePath="images\flags\NORTHERN MARIANA ISLANDS.bmp" SelfReg="false" NextFile="NORWAY.bmp"/>
+    <ROW File="NORWAY.bmp" Component_="AFGHANISTAN.bmp" FileName="NORWAY.bmp" Attributes="0" SourcePath="images\flags\NORWAY.bmp" SelfReg="false" NextFile="OMAN.bmp"/>
+    <ROW File="OMAN.bmp" Component_="AFGHANISTAN.bmp" FileName="OMAN.bmp" Attributes="0" SourcePath="images\flags\OMAN.bmp" SelfReg="false" NextFile="PAKISTAN.bmp"/>
+    <ROW File="PAKISTAN.bmp" Component_="AFGHANISTAN.bmp" FileName="PAKISTAN.bmp" Attributes="0" SourcePath="images\flags\PAKISTAN.bmp" SelfReg="false" NextFile="PALAU.bmp"/>
+    <ROW File="PALAU.bmp" Component_="AFGHANISTAN.bmp" FileName="PALAU.bmp" Attributes="0" SourcePath="images\flags\PALAU.bmp" SelfReg="false" NextFile="PALESTINE.bmp"/>
+    <ROW File="PALESTINE.bmp" Component_="AFGHANISTAN.bmp" FileName="PALEST~1.bmp|PALESTINE.bmp" Attributes="0" SourcePath="images\flags\PALESTINE.bmp" SelfReg="false" NextFile="PANAMA.bmp"/>
+    <ROW File="PANAMA.bmp" Component_="AFGHANISTAN.bmp" FileName="PANAMA.bmp" Attributes="0" SourcePath="images\flags\PANAMA.bmp" SelfReg="false" NextFile="PAPUA_NEW_GUINEA.bmp"/>
+    <ROW File="PAPUA_NEW_GUINEA.bmp" Component_="AFGHANISTAN.bmp" FileName="PAPUAN~1.bmp|PAPUA NEW GUINEA.bmp" Attributes="0" SourcePath="images\flags\PAPUA NEW GUINEA.bmp" SelfReg="false" NextFile="PARAGUAY.bmp"/>
+    <ROW File="PARAGUAY.bmp" Component_="AFGHANISTAN.bmp" FileName="PARAGUAY.bmp" Attributes="0" SourcePath="images\flags\PARAGUAY.bmp" SelfReg="false" NextFile="PERU.bmp"/>
+    <ROW File="PERU.bmp" Component_="AFGHANISTAN.bmp" FileName="PERU.bmp" Attributes="0" SourcePath="images\flags\PERU.bmp" SelfReg="false" NextFile="PHILIPPINES.bmp"/>
+    <ROW File="PHILIPPINES.bmp" Component_="AFGHANISTAN.bmp" FileName="PHILIP~1.bmp|PHILIPPINES.bmp" Attributes="0" SourcePath="images\flags\PHILIPPINES.bmp" SelfReg="false" NextFile="PITCAIRN.bmp"/>
+    <ROW File="PITCAIRN.bmp" Component_="AFGHANISTAN.bmp" FileName="PITCAIRN.bmp" Attributes="0" SourcePath="images\flags\PITCAIRN.bmp" SelfReg="false" NextFile="POLAND.bmp"/>
+    <ROW File="POLAND.bmp" Component_="AFGHANISTAN.bmp" FileName="POLAND.bmp" Attributes="0" SourcePath="images\flags\POLAND.bmp" SelfReg="false" NextFile="PORTUGAL.bmp"/>
+    <ROW File="PORTUGAL.bmp" Component_="AFGHANISTAN.bmp" FileName="PORTUGAL.bmp" Attributes="0" SourcePath="images\flags\PORTUGAL.bmp" SelfReg="false" NextFile="pspbrwse.jbf"/>
+    <ROW File="PUERTO_RICO.bmp" Component_="AFGHANISTAN.bmp" FileName="PUERTO~1.bmp|PUERTO RICO.bmp" Attributes="0" SourcePath="images\flags\PUERTO RICO.bmp" SelfReg="false" NextFile="QATAR.bmp"/>
+    <ROW File="QATAR.bmp" Component_="AFGHANISTAN.bmp" FileName="QATAR.bmp" Attributes="0" SourcePath="images\flags\QATAR.bmp" SelfReg="false" NextFile="REUNION.bmp"/>
+    <ROW File="REUNION.bmp" Component_="AFGHANISTAN.bmp" FileName="REUNION.bmp" Attributes="0" SourcePath="images\flags\REUNION.bmp" SelfReg="false" NextFile="ROMANIA.bmp"/>
+    <ROW File="ROMANIA.bmp" Component_="AFGHANISTAN.bmp" FileName="ROMANIA.bmp" Attributes="0" SourcePath="images\flags\ROMANIA.bmp" SelfReg="false" NextFile="RUSSIA.bmp"/>
+    <ROW File="RUSSIA.bmp" Component_="AFGHANISTAN.bmp" FileName="RUSSIA.bmp" Attributes="0" SourcePath="images\flags\RUSSIA.bmp" SelfReg="false" NextFile="RWANDA.bmp"/>
+    <ROW File="RWANDA.bmp" Component_="AFGHANISTAN.bmp" FileName="RWANDA.bmp" Attributes="0" SourcePath="images\flags\RWANDA.bmp" SelfReg="false" NextFile="SAMOA.bmp"/>
+    <ROW File="SAMOA.bmp" Component_="AFGHANISTAN.bmp" FileName="SAMOA.bmp" Attributes="0" SourcePath="images\flags\SAMOA.bmp" SelfReg="false" NextFile="SAN_MARINO.bmp"/>
+    <ROW File="SAN_MARINO.bmp" Component_="AFGHANISTAN.bmp" FileName="SANMAR~1.bmp|SAN MARINO.bmp" Attributes="0" SourcePath="images\flags\SAN MARINO.bmp" SelfReg="false" NextFile="SAO_TOME.bmp"/>
+    <ROW File="SAO_TOME.bmp" Component_="AFGHANISTAN.bmp" FileName="SAOTOM~1.bmp|SAO TOME.bmp" Attributes="0" SourcePath="images\flags\SAO TOME.bmp" SelfReg="false" NextFile="SAUDI_ARABIA.bmp"/>
+    <ROW File="SAUDI_ARABIA.bmp" Component_="AFGHANISTAN.bmp" FileName="SAUDIA~1.bmp|SAUDI ARABIA.bmp" Attributes="0" SourcePath="images\flags\SAUDI ARABIA.bmp" SelfReg="false" NextFile="SENEGAL.bmp"/>
+    <ROW File="SENEGAL.bmp" Component_="AFGHANISTAN.bmp" FileName="SENEGAL.bmp" Attributes="0" SourcePath="images\flags\SENEGAL.bmp" SelfReg="false" NextFile="SEYCHELLES.bmp"/>
+    <ROW File="SEYCHELLES.bmp" Component_="AFGHANISTAN.bmp" FileName="SEYCHE~1.bmp|SEYCHELLES.bmp" Attributes="0" SourcePath="images\flags\SEYCHELLES.bmp" SelfReg="false" NextFile="SIERRA_LEONE.bmp"/>
+    <ROW File="SIERRA_LEONE.bmp" Component_="AFGHANISTAN.bmp" FileName="SIERRA~1.bmp|SIERRA LEONE.bmp" Attributes="0" SourcePath="images\flags\SIERRA LEONE.bmp" SelfReg="false" NextFile="SINGAPORE.bmp"/>
+    <ROW File="SINGAPORE.bmp" Component_="AFGHANISTAN.bmp" FileName="SINGAP~1.bmp|SINGAPORE.bmp" Attributes="0" SourcePath="images\flags\SINGAPORE.bmp" SelfReg="false" NextFile="SLOVAKIA.bmp"/>
+    <ROW File="SLOVAKIA.bmp" Component_="AFGHANISTAN.bmp" FileName="SLOVAKIA.bmp" Attributes="0" SourcePath="images\flags\SLOVAKIA.bmp" SelfReg="false" NextFile="SLOVENIA.bmp"/>
+    <ROW File="SLOVENIA.bmp" Component_="AFGHANISTAN.bmp" FileName="SLOVENIA.bmp" Attributes="0" SourcePath="images\flags\SLOVENIA.bmp" SelfReg="false" NextFile="SOLOMON_ISLANDS.bmp"/>
+    <ROW File="SOLOMON_ISLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="SOLOMO~1.bmp|SOLOMON ISLANDS.bmp" Attributes="0" SourcePath="images\flags\SOLOMON ISLANDS.bmp" SelfReg="false" NextFile="SOMALIA.bmp"/>
+    <ROW File="SOMALIA.bmp" Component_="AFGHANISTAN.bmp" FileName="SOMALIA.bmp" Attributes="0" SourcePath="images\flags\SOMALIA.bmp" SelfReg="false" NextFile="SOUTH_AFRICA.bmp"/>
+    <ROW File="SOUTH_AFRICA.bmp" Component_="AFGHANISTAN.bmp" FileName="SOUTHA~1.bmp|SOUTH AFRICA.bmp" Attributes="0" SourcePath="images\flags\SOUTH AFRICA.bmp" SelfReg="false" NextFile="SPAIN.bmp"/>
+    <ROW File="SPAIN.bmp" Component_="AFGHANISTAN.bmp" FileName="SPAIN.bmp" Attributes="0" SourcePath="images\flags\SPAIN.bmp" SelfReg="false" NextFile="SRI_LANKA.bmp"/>
+    <ROW File="SRI_LANKA.bmp" Component_="AFGHANISTAN.bmp" FileName="SRILAN~1.bmp|SRI LANKA.bmp" Attributes="0" SourcePath="images\flags\SRI LANKA.bmp" SelfReg="false" NextFile="ST_HELENA.bmp"/>
+    <ROW File="ST_HELENA.bmp" Component_="AFGHANISTAN.bmp" FileName="STHELE~1.bmp|ST HELENA.bmp" Attributes="0" SourcePath="images\flags\ST HELENA.bmp" SelfReg="false" NextFile="ST_KITTS_AND_NEVIS.bmp"/>
+    <ROW File="ST_KITTS_AND_NEVIS.bmp" Component_="AFGHANISTAN.bmp" FileName="STKITT~1.bmp|ST KITTS AND NEVIS.bmp" Attributes="0" SourcePath="images\flags\ST KITTS AND NEVIS.bmp" SelfReg="false" NextFile="ST_LUCIA.bmp"/>
+    <ROW File="ST_LUCIA.bmp" Component_="AFGHANISTAN.bmp" FileName="STLUCI~1.bmp|ST LUCIA.bmp" Attributes="0" SourcePath="images\flags\ST LUCIA.bmp" SelfReg="false" NextFile="ST_VINCENT.bmp"/>
+    <ROW File="ST_VINCENT.bmp" Component_="AFGHANISTAN.bmp" FileName="STVINC~1.bmp|ST VINCENT.bmp" Attributes="0" SourcePath="images\flags\ST VINCENT.bmp" SelfReg="false" NextFile="SUDAN.bmp"/>
+    <ROW File="SUDAN.bmp" Component_="AFGHANISTAN.bmp" FileName="SUDAN.bmp" Attributes="0" SourcePath="images\flags\SUDAN.bmp" SelfReg="false" NextFile="SURINAME.bmp"/>
+    <ROW File="SURINAME.bmp" Component_="AFGHANISTAN.bmp" FileName="SURINAME.bmp" Attributes="0" SourcePath="images\flags\SURINAME.bmp" SelfReg="false" NextFile="SWAZILAND.bmp"/>
+    <ROW File="SWAZILAND.bmp" Component_="AFGHANISTAN.bmp" FileName="SWAZIL~1.bmp|SWAZILAND.bmp" Attributes="0" SourcePath="images\flags\SWAZILAND.bmp" SelfReg="false" NextFile="SWEDEN.bmp"/>
+    <ROW File="SWEDEN.bmp" Component_="AFGHANISTAN.bmp" FileName="SWEDEN.bmp" Attributes="0" SourcePath="images\flags\SWEDEN.bmp" SelfReg="false" NextFile="SWITZERLAND.bmp"/>
+    <ROW File="SWITZERLAND.bmp" Component_="AFGHANISTAN.bmp" FileName="SWITZE~1.bmp|SWITZERLAND.bmp" Attributes="0" SourcePath="images\flags\SWITZERLAND.bmp" SelfReg="false" NextFile="SYRIA.bmp"/>
+    <ROW File="SYRIA.bmp" Component_="AFGHANISTAN.bmp" FileName="SYRIA.bmp" Attributes="0" SourcePath="images\flags\SYRIA.bmp" SelfReg="false" NextFile="TAIWAN.bmp"/>
+    <ROW File="TAIWAN.bmp" Component_="AFGHANISTAN.bmp" FileName="TAIWAN.bmp" Attributes="0" SourcePath="images\flags\TAIWAN.bmp" SelfReg="false" NextFile="TAJIKISTAN.bmp"/>
+    <ROW File="TAJIKISTAN.bmp" Component_="AFGHANISTAN.bmp" FileName="TAJIKI~1.bmp|TAJIKISTAN.bmp" Attributes="0" SourcePath="images\flags\TAJIKISTAN.bmp" SelfReg="false" NextFile="TANZANIA.bmp"/>
+    <ROW File="TANZANIA.bmp" Component_="AFGHANISTAN.bmp" FileName="TANZANIA.bmp" Attributes="0" SourcePath="images\flags\TANZANIA.bmp" SelfReg="false" NextFile="THAILAND.bmp"/>
+    <ROW File="THAILAND.bmp" Component_="AFGHANISTAN.bmp" FileName="THAILAND.bmp" Attributes="0" SourcePath="images\flags\THAILAND.bmp" SelfReg="false" NextFile="TOGO.bmp"/>
+    <ROW File="TOGO.bmp" Component_="AFGHANISTAN.bmp" FileName="TOGO.bmp" Attributes="0" SourcePath="images\flags\TOGO.bmp" SelfReg="false" NextFile="TOKELAU.bmp"/>
+    <ROW File="TOKELAU.bmp" Component_="AFGHANISTAN.bmp" FileName="TOKELAU.bmp" Attributes="0" SourcePath="images\flags\TOKELAU.bmp" SelfReg="false" NextFile="TONGA.bmp"/>
+    <ROW File="TONGA.bmp" Component_="AFGHANISTAN.bmp" FileName="TONGA.bmp" Attributes="0" SourcePath="images\flags\TONGA.bmp" SelfReg="false" NextFile="TRINIDAD___TOBAGO.bmp"/>
+    <ROW File="TRINIDAD___TOBAGO.bmp" Component_="AFGHANISTAN.bmp" FileName="TRINID~1.bmp|TRINIDAD &amp; TOBAGO.bmp" Attributes="0" SourcePath="images\flags\TRINIDAD &amp; TOBAGO.bmp" SelfReg="false" NextFile="TUNISIA.bmp"/>
+    <ROW File="TUNISIA.bmp" Component_="AFGHANISTAN.bmp" FileName="TUNISIA.bmp" Attributes="0" SourcePath="images\flags\TUNISIA.bmp" SelfReg="false" NextFile="TURKEY.bmp"/>
+    <ROW File="TURKEY.bmp" Component_="AFGHANISTAN.bmp" FileName="TURKEY.bmp" Attributes="0" SourcePath="images\flags\TURKEY.bmp" SelfReg="false" NextFile="TURKMENISTAN.bmp"/>
+    <ROW File="TURKMENISTAN.bmp" Component_="AFGHANISTAN.bmp" FileName="TURKME~1.bmp|TURKMENISTAN.bmp" Attributes="0" SourcePath="images\flags\TURKMENISTAN.bmp" SelfReg="false" NextFile="TURKS_AND_CAICOS.bmp"/>
+    <ROW File="TURKS_AND_CAICOS.bmp" Component_="AFGHANISTAN.bmp" FileName="TURKSA~1.bmp|TURKS AND CAICOS.bmp" Attributes="0" SourcePath="images\flags\TURKS AND CAICOS.bmp" SelfReg="false" NextFile="TUVALU.bmp"/>
+    <ROW File="TUVALU.bmp" Component_="AFGHANISTAN.bmp" FileName="TUVALU.bmp" Attributes="0" SourcePath="images\flags\TUVALU.bmp" SelfReg="false" NextFile="UGANDA.bmp"/>
+    <ROW File="TVKControls.dll" Component_="TVKControls.dll" FileName="TVKCon~1.dll|TVKControls.dll" Attributes="0" SourcePath="TVKing2\bin\Release\TVKControls.dll" SelfReg="false" NextFile="CrawlerLib.Net.dll"/>
+    <ROW File="TVKing2.exe" Component_="TVKing2.exe" FileName="TVKing2.exe" Attributes="0" SourcePath="TVKing2\bin\Release\TVKing2.exe" SelfReg="false" NextFile="AxInterop.ShockwaveFlashObjects.dll"/>
+    <ROW File="TVKingSkin.dll" Component_="TVKingSkin.dll" FileName="TVKing~1.dll|TVKingSkin.dll" Attributes="0" SourcePath="TVKing2\bin\Release\TVKingSkin.dll" SelfReg="false" NextFile="DevExpress.Data.v11.1.dll"/>
+    <ROW File="UGANDA.bmp" Component_="AFGHANISTAN.bmp" FileName="UGANDA.bmp" Attributes="0" SourcePath="images\flags\UGANDA.bmp" SelfReg="false" NextFile="UKRAINE.bmp"/>
+    <ROW File="UKRAINE.bmp" Component_="AFGHANISTAN.bmp" FileName="UKRAINE.bmp" Attributes="0" SourcePath="images\flags\UKRAINE.bmp" SelfReg="false" NextFile="UNITED_ARAB_EMIRATES.bmp"/>
+    <ROW File="UNITED_ARAB_EMIRATES.bmp" Component_="AFGHANISTAN.bmp" FileName="UNITED~1.bmp|UNITED ARAB EMIRATES.bmp" Attributes="0" SourcePath="images\flags\UNITED ARAB EMIRATES.bmp" SelfReg="false" NextFile="UNITED_KINGDOM.bmp"/>
+    <ROW File="UNITED_KINGDOM.bmp" Component_="AFGHANISTAN.bmp" FileName="UNITED~2.bmp|UNITED KINGDOM.bmp" Attributes="0" SourcePath="images\flags\UNITED KINGDOM.bmp" SelfReg="false" NextFile="URUGUAY.bmp"/>
+    <ROW File="URUGUAY.bmp" Component_="AFGHANISTAN.bmp" FileName="URUGUAY.bmp" Attributes="0" SourcePath="images\flags\URUGUAY.bmp" SelfReg="false" NextFile="USA.bmp"/>
+    <ROW File="USA.bmp" Component_="AFGHANISTAN.bmp" FileName="USA.bmp" Attributes="0" SourcePath="images\flags\USA.bmp" SelfReg="false" NextFile="UZBEKISTAN.bmp"/>
+    <ROW File="UZBEKISTAN.bmp" Component_="AFGHANISTAN.bmp" FileName="UZBEKI~1.bmp|UZBEKISTAN.bmp" Attributes="0" SourcePath="images\flags\UZBEKISTAN.bmp" SelfReg="false" NextFile="VANUATU.bmp"/>
+    <ROW File="VANUATU.bmp" Component_="AFGHANISTAN.bmp" FileName="VANUATU.bmp" Attributes="0" SourcePath="images\flags\VANUATU.bmp" SelfReg="false" NextFile="VENEZUELA.bmp"/>
+    <ROW File="VENEZUELA.bmp" Component_="AFGHANISTAN.bmp" FileName="VENEZU~1.bmp|VENEZUELA.bmp" Attributes="0" SourcePath="images\flags\VENEZUELA.bmp" SelfReg="false" NextFile="VIETNAM.bmp"/>
+    <ROW File="VIETNAM.bmp" Component_="AFGHANISTAN.bmp" FileName="VIETNAM.bmp" Attributes="0" SourcePath="images\flags\VIETNAM.bmp" SelfReg="false" NextFile="VIRGIN_ISLANDS__American_.bmp"/>
+    <ROW File="VIRGIN_ISLANDS.bmp" Component_="AFGHANISTAN.bmp" FileName="VIRGIN~2.bmp|VIRGIN ISLANDS.bmp" Attributes="0" SourcePath="images\flags\VIRGIN ISLANDS.bmp" SelfReg="false" NextFile="WEB.bmp"/>
+    <ROW File="VIRGIN_ISLANDS__American_.bmp" Component_="AFGHANISTAN.bmp" FileName="VIRGIN~1.bmp|VIRGIN ISLANDS (American).bmp" Attributes="0" SourcePath="images\flags\VIRGIN ISLANDS (American).bmp" SelfReg="false" NextFile="VIRGIN_ISLANDS.bmp"/>
+    <ROW File="WEB.bmp" Component_="AFGHANISTAN.bmp" FileName="WEB.bmp" Attributes="0" SourcePath="images\flags\WEB.bmp" SelfReg="false" NextFile="YEMEN.bmp"/>
+    <ROW File="YEMEN.bmp" Component_="AFGHANISTAN.bmp" FileName="YEMEN.bmp" Attributes="0" SourcePath="images\flags\YEMEN.bmp" SelfReg="false" NextFile="ZAMBIA.bmp"/>
+    <ROW File="ZAMBIA.bmp" Component_="AFGHANISTAN.bmp" FileName="ZAMBIA.bmp" Attributes="0" SourcePath="images\flags\ZAMBIA.bmp" SelfReg="false" NextFile="ZIMBABWE.bmp"/>
+    <ROW File="ZIMBABWE.bmp" Component_="AFGHANISTAN.bmp" FileName="ZIMBABWE.bmp" Attributes="0" SourcePath="images\flags\ZIMBABWE.bmp" SelfReg="false" NextFile="x250_eye.gif"/>
+    <ROW File="accept.png" Component_="x250_eye.gif" FileName="accept.png" Attributes="0" SourcePath="images\images\accept.png" SelfReg="false" NextFile="add_to_fav.png"/>
+    <ROW File="add_to_fav.png" Component_="x250_eye.gif" FileName="add_to~1.png|add_to_fav.png" Attributes="0" SourcePath="images\images\add_to_fav.png" SelfReg="false" NextFile="animation_loading.gif"/>
+    <ROW File="animation_loading.gif" Component_="x250_eye.gif" FileName="animat~1.gif|animation_loading.gif" Attributes="0" SourcePath="images\images\animation_loading.gif" SelfReg="false" NextFile="background.jpg"/>
+    <ROW File="background.jpg" Component_="x250_eye.gif" FileName="backgr~1.jpg|background.jpg" Attributes="0" SourcePath="images\images\background.jpg" SelfReg="false" NextFile="bandwith1.jpg"/>
+    <ROW File="bandwith1.jpg" Component_="x250_eye.gif" FileName="bandwi~1.jpg|bandwith1.jpg" Attributes="0" SourcePath="images\images\bandwith1.jpg" SelfReg="false" NextFile="bandwith2.jpg"/>
+    <ROW File="bandwith2.jpg" Component_="x250_eye.gif" FileName="bandwi~2.jpg|bandwith2.jpg" Attributes="0" SourcePath="images\images\bandwith2.jpg" SelfReg="false" NextFile="bandwith3.jpg"/>
+    <ROW File="bandwith3.jpg" Component_="x250_eye.gif" FileName="bandwi~3.jpg|bandwith3.jpg" Attributes="0" SourcePath="images\images\bandwith3.jpg" SelfReg="false" NextFile="bandwith4.jpg"/>
+    <ROW File="bandwith4.jpg" Component_="x250_eye.gif" FileName="bandwi~4.jpg|bandwith4.jpg" Attributes="0" SourcePath="images\images\bandwith4.jpg" SelfReg="false" NextFile="bandwith5.jpg"/>
+    <ROW File="bandwith5.jpg" Component_="x250_eye.gif" FileName="bandwi~5.jpg|bandwith5.jpg" Attributes="0" SourcePath="images\images\bandwith5.jpg" SelfReg="false" NextFile="bg_trial_expired_image.jpg"/>
+    <ROW File="bg_trial_expired_image.jpg" Component_="x250_eye.gif" FileName="bg_tri~1.jpg|bg_trial_expired_image.jpg" Attributes="0" SourcePath="images\images\bg_trial_expired_image.jpg" SelfReg="false" NextFile="blackbg.png"/>
+    <ROW File="blackbg.png" Component_="x250_eye.gif" FileName="blackbg.png" Attributes="0" SourcePath="images\images\blackbg.png" SelfReg="false" NextFile="block.png"/>
+    <ROW File="block.png" Component_="x250_eye.gif" FileName="block.png" Attributes="0" SourcePath="images\images\block.png" SelfReg="false" NextFile="broken_link.png"/>
+    <ROW File="broken_link.png" Component_="x250_eye.gif" FileName="broken~1.png|broken_link.png" Attributes="0" SourcePath="images\images\broken_link.png" SelfReg="false" NextFile="button_left.jpg"/>
+    <ROW File="button_left.jpg" Component_="x250_eye.gif" FileName="button~1.jpg|button_left.jpg" Attributes="0" SourcePath="images\images\button_left.jpg" SelfReg="false" NextFile="button_left_click.jpg"/>
+    <ROW File="button_left_click.jpg" Component_="x250_eye.gif" FileName="button~2.jpg|button_left_click.jpg" Attributes="0" SourcePath="images\images\button_left_click.jpg" SelfReg="false" NextFile="button_middle.jpg"/>
+    <ROW File="button_mid_click.jpg" Component_="x250_eye.gif" FileName="button~4.jpg|button_mid_click.jpg" Attributes="0" SourcePath="images\images\button_mid_click.jpg" SelfReg="false" NextFile="button_register_of.png"/>
+    <ROW File="button_middle.jpg" Component_="x250_eye.gif" FileName="button~3.jpg|button_middle.jpg" Attributes="0" SourcePath="images\images\button_middle.jpg" SelfReg="false" NextFile="button_mid_click.jpg"/>
+    <ROW File="button_register_of.png" Component_="x250_eye.gif" FileName="button~1.png|button_register_of.png" Attributes="0" SourcePath="images\images\button_register_of.png" SelfReg="false" NextFile="button_register_on.png"/>
+    <ROW File="button_register_on.png" Component_="x250_eye.gif" FileName="button~2.png|button_register_on.png" Attributes="0" SourcePath="images\images\button_register_on.png" SelfReg="false" NextFile="button_right.jpg"/>
+    <ROW File="button_right.jpg" Component_="x250_eye.gif" FileName="button~5.jpg|button_right.jpg" Attributes="0" SourcePath="images\images\button_right.jpg" SelfReg="false" NextFile="button_right_click.jpg"/>
+    <ROW File="button_right_click.jpg" Component_="x250_eye.gif" FileName="button~6.jpg|button_right_click.jpg" Attributes="0" SourcePath="images\images\button_right_click.jpg" SelfReg="false" NextFile="button_small_mode.png"/>
+    <ROW File="button_small_mode.png" Component_="x250_eye.gif" FileName="button~3.png|button_small_mode.png" Attributes="0" SourcePath="images\images\button_small_mode.png" SelfReg="false" NextFile="control_bg.jpg"/>
+    <ROW File="control_bg.jpg" Component_="x250_eye.gif" FileName="contro~1.jpg|control_bg.jpg" Attributes="0" SourcePath="images\images\control_bg.jpg" SelfReg="false" NextFile="Copyright.png"/>
+    <ROW File="default.png" Component_="x250_eye.gif" FileName="default.png" Attributes="0" SourcePath="images\images\default.png" SelfReg="false" NextFile="divider.jpg"/>
+    <ROW File="divider.jpg" Component_="x250_eye.gif" FileName="divider.jpg" Attributes="0" SourcePath="images\images\divider.jpg" SelfReg="false" NextFile="fav_icon.jpg"/>
+    <ROW File="fav_icon.jpg" Component_="x250_eye.gif" FileName="fav_icon.jpg" Attributes="0" SourcePath="images\images\fav_icon.jpg" SelfReg="false" NextFile="form_top.png"/>
+    <ROW File="form_top.png" Component_="x250_eye.gif" FileName="form_top.png" Attributes="0" SourcePath="images\images\form_top.png" SelfReg="false" NextFile="form_top_left.png"/>
+    <ROW File="form_top_left.png" Component_="x250_eye.gif" FileName="form_t~1.png|form_top_left.png" Attributes="0" SourcePath="images\images\form_top_left.png" SelfReg="false" NextFile="form_top_right.png"/>
+    <ROW File="form_top_right.png" Component_="x250_eye.gif" FileName="form_t~2.png|form_top_right.png" Attributes="0" SourcePath="images\images\form_top_right.png" SelfReg="false" NextFile="free_100.jpg"/>
+    <ROW File="free_100.jpg" Component_="x250_eye.gif" FileName="free_100.jpg" Attributes="0" SourcePath="images\images\free_100.jpg" SelfReg="false" NextFile="full.png"/>
+    <ROW File="full.png" Component_="x250_eye.gif" FileName="full.png" Attributes="0" SourcePath="images\images\full.png" SelfReg="false" NextFile="icon_close.png"/>
+    <ROW File="icon_close.png" Component_="x250_eye.gif" FileName="icon_c~1.png|icon_close.png" Attributes="0" SourcePath="images\images\icon_close.png" SelfReg="false" NextFile="icon_close_n.png"/>
+    <ROW File="icon_close_n.png" Component_="x250_eye.gif" FileName="icon_c~2.png|icon_close_n.png" Attributes="0" SourcePath="images\images\icon_close_n.png" SelfReg="false" NextFile="icon_config.png"/>
+    <ROW File="icon_config.png" Component_="x250_eye.gif" FileName="icon_c~3.png|icon_config.png" Attributes="0" SourcePath="images\images\icon_config.png" SelfReg="false" NextFile="icon_key.png"/>
+    <ROW File="icon_key.png" Component_="x250_eye.gif" FileName="icon_key.png" Attributes="0" SourcePath="images\images\icon_key.png" SelfReg="false" NextFile="icon_maximize.png"/>
+    <ROW File="icon_maximize.png" Component_="x250_eye.gif" FileName="icon_m~1.png|icon_maximize.png" Attributes="0" SourcePath="images\images\icon_maximize.png" SelfReg="false" NextFile="icon_maximize_n.png"/>
+    <ROW File="icon_maximize_n.png" Component_="x250_eye.gif" FileName="icon_m~2.png|icon_maximize_n.png" Attributes="0" SourcePath="images\images\icon_maximize_n.png" SelfReg="false" NextFile="icon_minimize.png"/>
+    <ROW File="icon_minimize.png" Component_="x250_eye.gif" FileName="icon_m~3.png|icon_minimize.png" Attributes="0" SourcePath="images\images\icon_minimize.png" SelfReg="false" NextFile="icon_minimize_n.png"/>
+    <ROW File="icon_minimize_n.png" Component_="x250_eye.gif" FileName="icon_m~4.png|icon_minimize_n.png" Attributes="0" SourcePath="images\images\icon_minimize_n.png" SelfReg="false" NextFile="icon_tvking.ico"/>
+    <ROW File="icon_tv_king.ico" Component_="x250_eye.gif" FileName="icon_t~3.ico|icon_tv_king.ico" Attributes="0" SourcePath="images\images\icon_tv_king.ico" SelfReg="false" NextFile="icon_users.png"/>
+    <ROW File="icon_tvking.ico" Component_="x250_eye.gif" FileName="icon_t~1.ico|icon_tvking.ico" Attributes="0" SourcePath="images\images\icon_tvking.ico" SelfReg="false" NextFile="icon_tvking_clean.ico"/>
+    <ROW File="icon_tvking_clean.ico" Component_="x250_eye.gif" FileName="icon_t~2.ico|icon_tvking_clean.ico" Attributes="0" SourcePath="images\images\icon_tvking_clean.ico" SelfReg="false" NextFile="icon_tvking_clean.png"/>
+    <ROW File="icon_tvking_clean.png" Component_="x250_eye.gif" FileName="icon_t~1.png|icon_tvking_clean.png" Attributes="0" SourcePath="images\images\icon_tvking_clean.png" SelfReg="false" NextFile="icon_tv_king.ico"/>
+    <ROW File="icon_users.png" Component_="x250_eye.gif" FileName="icon_u~1.png|icon_users.png" Attributes="0" SourcePath="images\images\icon_users.png" SelfReg="false" NextFile="icon_youtube_on.png"/>
+    <ROW File="icon_youtube_on.png" Component_="x250_eye.gif" FileName="icon_y~1.png|icon_youtube_on.png" Attributes="0" SourcePath="images\images\icon_youtube_on.png" SelfReg="false" NextFile="info_first.png"/>
+    <ROW File="info_first.png" Component_="x250_eye.gif" FileName="info_f~1.png|info_first.png" Attributes="0" SourcePath="images\images\info_first.png" SelfReg="false" NextFile="info_last.png"/>
+    <ROW File="info_last.png" Component_="x250_eye.gif" FileName="info_l~1.png|info_last.png" Attributes="0" SourcePath="images\images\info_last.png" SelfReg="false" NextFile="info_middle.png"/>
+    <ROW File="info_middle.png" Component_="x250_eye.gif" FileName="info_m~1.png|info_middle.png" Attributes="0" SourcePath="images\images\info_middle.png" SelfReg="false" NextFile="install2.bmp"/>
+    <ROW File="install2.bmp" Component_="x250_eye.gif" FileName="install2.bmp" Attributes="0" SourcePath="images\images\install2.bmp" SelfReg="false" NextFile="installer_image_2.jpg"/>
+    <ROW File="installer_image_2.jpg" Component_="x250_eye.gif" FileName="instal~1.jpg|installer_image_2.jpg" Attributes="0" SourcePath="images\images\installer_image_2.jpg" SelfReg="false" NextFile="last_watched.png"/>
+    <ROW File="last_watched.png" Component_="x250_eye.gif" FileName="last_w~1.png|last_watched.png" Attributes="0" SourcePath="images\images\last_watched.png" SelfReg="false" NextFile="loader.png"/>
+    <ROW File="loader.png" Component_="x250_eye.gif" FileName="loader.png" Attributes="0" SourcePath="images\images\loader.png" SelfReg="false" NextFile="loadingicon.gif"/>
+    <ROW File="loadingicon.gif" Component_="x250_eye.gif" FileName="loadin~1.gif|loadingicon.gif" Attributes="0" SourcePath="images\images\loadingicon.gif" SelfReg="false" NextFile="logo_text_tvking.png"/>
+    <ROW File="logo_text_tvking.png" Component_="x250_eye.gif" FileName="logo_t~1.png|logo_text_tvking.png" Attributes="0" SourcePath="images\images\logo_text_tvking.png" SelfReg="false" NextFile="logo_tvking.jpg"/>
+    <ROW File="logo_tvking.jpg" Component_="x250_eye.gif" FileName="logo_t~1.jpg|logo_tvking.jpg" Attributes="0" SourcePath="images\images\logo_tvking.jpg" SelfReg="false" NextFile="message_screen.jpg"/>
+    <ROW File="message_screen.jpg" Component_="x250_eye.gif" FileName="messag~1.jpg|message_screen.jpg" Attributes="0" SourcePath="images\images\message_screen.jpg" SelfReg="false" NextFile="most_watched.gif"/>
+    <ROW File="most_watched.gif" Component_="x250_eye.gif" FileName="most_w~1.gif|most_watched.gif" Attributes="0" SourcePath="images\images\most_watched.gif" SelfReg="false" NextFile="psd_03.png"/>
+    <ROW File="psd_03.png" Component_="x250_eye.gif" FileName="psd_03.png" Attributes="0" SourcePath="images\images\psd_03.png" SelfReg="false" NextFile="psd_03a.png"/>
+    <ROW File="psd_03a.png" Component_="x250_eye.gif" FileName="psd_03a.png" Attributes="0" SourcePath="images\images\psd_03a.png" SelfReg="false" NextFile="psd_04.png"/>
+    <ROW File="psd_04.png" Component_="x250_eye.gif" FileName="psd_04.png" Attributes="0" SourcePath="images\images\psd_04.png" SelfReg="false" NextFile="psd_05.png"/>
+    <ROW File="psd_05.png" Component_="x250_eye.gif" FileName="psd_05.png" Attributes="0" SourcePath="images\images\psd_05.png" SelfReg="false" NextFile="psd_05a.png"/>
+    <ROW File="psd_05a.png" Component_="x250_eye.gif" FileName="psd_05a.png" Attributes="0" SourcePath="images\images\psd_05a.png" SelfReg="false" NextFile="rate_button_click.jpg"/>
+    <ROW File="pspbrwse.jbf" Component_="AFGHANISTAN.bmp" FileName="pspbrwse.jbf" Attributes="0" SourcePath="images\flags\pspbrwse.jbf" SelfReg="false" NextFile="PUERTO_RICO.bmp"/>
+    <ROW File="rate_button_click.jpg" Component_="x250_eye.gif" FileName="rate_b~1.jpg|rate_button_click.jpg" Attributes="0" SourcePath="images\images\rate_button_click.jpg" SelfReg="false" NextFile="rate_button_hover.jpg"/>
+    <ROW File="rate_button_hover.jpg" Component_="x250_eye.gif" FileName="rate_b~2.jpg|rate_button_hover.jpg" Attributes="0" SourcePath="images\images\rate_button_hover.jpg" SelfReg="false" NextFile="rating_selected.png"/>
+    <ROW File="rating_selected.png" Component_="x250_eye.gif" FileName="rating~1.png|rating_selected.png" Attributes="0" SourcePath="images\images\rating_selected.png" SelfReg="false" NextFile="rating_unselected.png"/>
+    <ROW File="rating_unselected.png" Component_="x250_eye.gif" FileName="rating~2.png|rating_unselected.png" Attributes="0" SourcePath="images\images\rating_unselected.png" SelfReg="false" NextFile="refresh.png"/>
+    <ROW File="refresh.png" Component_="x250_eye.gif" FileName="refresh.png" Attributes="0" SourcePath="images\images\refresh.png" SelfReg="false" NextFile="register_ad.jpg"/>
+    <ROW File="reg_now_button.jpg" Component_="x250_eye.gif" FileName="reg_no~1.jpg|reg_now_button.jpg" Attributes="0" SourcePath="images\images\reg_now_button.jpg" SelfReg="false" NextFile="reg_ver.jpg"/>
+    <ROW File="reg_ver.jpg" Component_="x250_eye.gif" FileName="reg_ver.jpg" Attributes="0" SourcePath="images\images\reg_ver.jpg" SelfReg="false" NextFile="remove_fav.png"/>
+    <ROW File="register_ad.jpg" Component_="x250_eye.gif" FileName="regist~1.jpg|register_ad.jpg" Attributes="0" SourcePath="images\images\register_ad.jpg" SelfReg="false" NextFile="reg_now_button.jpg"/>
+    <ROW File="remove_fav.png" Component_="x250_eye.gif" FileName="remove~1.png|remove_fav.png" Attributes="0" SourcePath="images\images\remove_fav.png" SelfReg="false" NextFile="scroll_bg.jpg"/>
+    <ROW File="scroll_bg.jpg" Component_="x250_eye.gif" FileName="scroll~1.jpg|scroll_bg.jpg" Attributes="0" SourcePath="images\images\scroll_bg.jpg" SelfReg="false" NextFile="scroll_down.jpg"/>
+    <ROW File="scroll_down.jpg" Component_="x250_eye.gif" FileName="scroll~2.jpg|scroll_down.jpg" Attributes="0" SourcePath="images\images\scroll_down.jpg" SelfReg="false" NextFile="scroll_indicator.jpg"/>
+    <ROW File="scroll_indicator.jpg" Component_="x250_eye.gif" FileName="scroll~3.jpg|scroll_indicator.jpg" Attributes="0" SourcePath="images\images\scroll_indicator.jpg" SelfReg="false" NextFile="scroll_indicator_bottom.jpg"/>
+    <ROW File="scroll_indicator_bottom.jpg" Component_="x250_eye.gif" FileName="scroll~4.jpg|scroll_indicator_bottom.jpg" Attributes="0" SourcePath="images\images\scroll_indicator_bottom.jpg" SelfReg="false" NextFile="scroll_indicator_top.jpg"/>
+    <ROW File="scroll_indicator_top.jpg" Component_="x250_eye.gif" FileName="scroll~5.jpg|scroll_indicator_top.jpg" Attributes="0" SourcePath="images\images\scroll_indicator_top.jpg" SelfReg="false" NextFile="scroll_up.jpg"/>
+    <ROW File="scroll_up.jpg" Component_="x250_eye.gif" FileName="scroll~6.jpg|scroll_up.jpg" Attributes="0" SourcePath="images\images\scroll_up.jpg" SelfReg="false" NextFile="search.png"/>
+    <ROW File="search.png" Component_="x250_eye.gif" FileName="search.png" Attributes="0" SourcePath="images\images\search.png" SelfReg="false" NextFile="separator_ads.jpg"/>
+    <ROW File="separator_ads.jpg" Component_="x250_eye.gif" FileName="separa~1.jpg|separator_ads.jpg" Attributes="0" SourcePath="images\images\separator_ads.jpg" SelfReg="false" NextFile="star_chooser_off.png"/>
+    <ROW File="star_chooser_off.png" Component_="x250_eye.gif" FileName="star_c~1.png|star_chooser_off.png" Attributes="0" SourcePath="images\images\star_chooser_off.png" SelfReg="false" NextFile="star_chooser_on.png"/>
+    <ROW File="star_chooser_on.png" Component_="x250_eye.gif" FileName="star_c~2.png|star_chooser_on.png" Attributes="0" SourcePath="images\images\star_chooser_on.png" SelfReg="false" NextFile="steps.png"/>
+    <ROW File="steps.png" Component_="x250_eye.gif" FileName="steps.png" Attributes="0" SourcePath="images\images\steps.png" SelfReg="false" NextFile="stop_button.png"/>
+    <ROW File="stop_button.png" Component_="x250_eye.gif" FileName="stop_b~1.png|stop_button.png" Attributes="0" SourcePath="images\images\stop_button.png" SelfReg="false" NextFile="tell_friend.png"/>
+    <ROW File="tell_friend.png" Component_="x250_eye.gif" FileName="tell_f~1.png|tell_friend.png" Attributes="0" SourcePath="images\images\tell_friend.png" SelfReg="false" NextFile="txt_border_bottom.jpg"/>
+    <ROW File="tvking_updater.exe" Component_="tvking_updater.exe" FileName="tvking~1.exe|tvking_updater.exe" Attributes="0" SourcePath="TVKing2\bin\Release\tvking_updater.exe" SelfReg="false" NextFile="AFGHANISTAN.bmp"/>
+    <ROW File="txt_border_bottom.jpg" Component_="x250_eye.gif" FileName="txt_bo~1.jpg|txt_border_bottom.jpg" Attributes="0" SourcePath="images\images\txt_border_bottom.jpg" SelfReg="false" NextFile="txt_border_right.jpg"/>
+    <ROW File="txt_border_right.jpg" Component_="x250_eye.gif" FileName="txt_bo~2.jpg|txt_border_right.jpg" Attributes="0" SourcePath="images\images\txt_border_right.jpg" SelfReg="false" NextFile="unlock_button.jpg"/>
+    <ROW File="unlock_button.jpg" Component_="x250_eye.gif" FileName="unlock~1.jpg|unlock_button.jpg" Attributes="0" SourcePath="images\images\unlock_button.jpg" SelfReg="false" NextFile="using_button.jpg"/>
+    <ROW File="using_button.jpg" Component_="x250_eye.gif" FileName="using_~1.jpg|using_button.jpg" Attributes="0" SourcePath="images\images\using_button.jpg" SelfReg="false" NextFile="volume_bg.jpg"/>
+    <ROW File="volume_bg.jpg" Component_="x250_eye.gif" FileName="volume~1.jpg|volume_bg.jpg" Attributes="0" SourcePath="images\images\volume_bg.jpg" SelfReg="false" NextFile="volume_indicator.jpg"/>
+    <ROW File="volume_indicator.jpg" Component_="x250_eye.gif" FileName="volume~2.jpg|volume_indicator.jpg" Attributes="0" SourcePath="images\images\volume_indicator.jpg" SelfReg="false" NextFile="volume_left.jpg"/>
+    <ROW File="volume_left.jpg" Component_="x250_eye.gif" FileName="volume~3.jpg|volume_left.jpg" Attributes="0" SourcePath="images\images\volume_left.jpg" SelfReg="false" NextFile="volume_left2.jpg"/>
+    <ROW File="volume_left2.jpg" Component_="x250_eye.gif" FileName="volume~4.jpg|volume_left2.jpg" Attributes="0" SourcePath="images\images\volume_left2.jpg" SelfReg="false" NextFile="volume_right.jpg"/>
+    <ROW File="volume_right.jpg" Component_="x250_eye.gif" FileName="volume~5.jpg|volume_right.jpg" Attributes="0" SourcePath="images\images\volume_right.jpg" SelfReg="false" NextFile="volume_right2.jpg"/>
+    <ROW File="volume_right2.jpg" Component_="x250_eye.gif" FileName="volume~6.jpg|volume_right2.jpg" Attributes="0" SourcePath="images\images\volume_right2.jpg" SelfReg="false" NextFile="youtube_icon.jpg"/>
+    <ROW File="x250_eye.gif" Component_="x250_eye.gif" FileName="300x25~1.gif|300x250_eye.gif" Attributes="0" SourcePath="images\images\300x250_eye.gif" SelfReg="false" NextFile="accept.png"/>
+    <ROW File="youtube_icon.jpg" Component_="x250_eye.gif" FileName="youtub~1.jpg|youtube-icon.jpg" Attributes="0" SourcePath="images\images\youtube-icon.jpg" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="." Languages="en" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="TVKing2\bin\Release\images\icon_tv_king.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\install" ExeName="Setup"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="install2.bmp" SourcePath="TVKing2\bin\Release\images\install2.bmp"/>
+    <ROW Name="installer_image_2.jpg" SourcePath="TVKing2\bin\Release\images\installer_image_2.jpg"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="3"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="2"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="3"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="301"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="201"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="TVKing_DIR" Component_="TVKing"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#TVKing2.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder][ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
+    <ROW Name="icon_tv_king.exe" SourcePath="TVKing2\bin\Release\images\icon_tv_king.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="Not Installed" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Shortcut_to_TVKing2.exe" Directory_="DesktopFolder" Name="TVKing" Component_="TVKing2.exe" Target="[#TVKing2.exe]" Hotkey="0" Icon_="icon_tv_king.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="TVKing" Directory_="TVKing_DIR" Name="TVKing" Component_="TVKing2.exe" Target="[#TVKing2.exe]" Hotkey="0" Icon_="icon_tv_king.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Uninstall" Directory_="TVKing_DIR" Name="Uninst~1|Uninstall" Component_="TVKing" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="AF6A8838_0269_46AF_B128_A460BD2C6136" DisplayName="Adobe Flash Player 10" SetupFileUrl="http://fpdownload.adobe.com/get/flashplayer/current/install_flash_player.exe" Location="1" ExactSize="0" Win9xVersions="Windows 95, Windows 95 OSR, Windows 95 OSR2.5, Windows 98, Windows 98 SE, Windows Millennium" WinNTVersions="Windows NT 4.0, Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3" Operator="0"/>
+    <ROW PrereqKey="F4_28D6_4E08_8648_3469A5B0C76D" DisplayName=".NET Framework 3.5" SetupFileUrl="http://download.microsoft.com/download/7/0/3/703455ee-a747-4cc8-bd3e-98a615c3aedb/dotNetFx35setup.exe" Location="1" ExactSize="0" Win9xVersions="Windows 95, Windows 95 OSR, Windows 95 OSR2.5, Windows 98, Windows 98 SE, Windows Millennium" WinNTVersions="Windows NT 4.0, Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4" Operator="1" Options="r"/>
+    <ATTRIBUTE name="PrereqsOrder" value="AF6A8838_0269_46AF_B128_A460BD2C6136 F4_28D6_4E08_8648_3469A5B0C76D"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="AF6A8838_0269_46AF_B128_A460BD2C6136_ADOBE_FLASH_10_SEARCH" Prereq="AF6A8838_0269_46AF_B128_A460BD2C6136" SearchType="0" SearchString="[SystemFolder]Macromed\Flash\NPSWF32.dll" VerMin="10.0" Order="1" Property="AI_ADOBE_FLASH_10_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="F4_28D6_4E08_8648_3469A5B0C76D_NET_35_SEARCH" Prereq="F4_28D6_4E08_8648_3469A5B0C76D" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5\Install" RefContent="M1" Order="1" Property="AI_NET_35_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="F4_28D6_4E08_8648_3469A5B0C76D_NET_35_WIN_SEARCH" Prereq="F4_28D6_4E08_8648_3469A5B0C76D" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\CurrentBuildNumber" RefContent="G6002" Order="2" Property="AI_NET_35_WIN_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="F4_28D6_4E08_8648_3469A5B0C76D_NET_40_CP_SEARCH" Prereq="F4_28D6_4E08_8648_3469A5B0C76D" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Client\Install" RefContent="M1" Order="3" Property="AI_NET_35_40_CP_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="F4_28D6_4E08_8648_3469A5B0C76D_NET_40_SEARCH" Prereq="F4_28D6_4E08_8648_3469A5B0C76D" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Install" RefContent="M1" Order="4" Property="AI_NET_35_40_PREREQSEARCH_PROP"/>
+  </COMPONENT>
+</DOCUMENT>
